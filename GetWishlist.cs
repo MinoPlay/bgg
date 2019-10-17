@@ -9,6 +9,7 @@ using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using System.Net.Http;
 using System.Xml.Linq;
+using System.Linq;
 
 namespace bgg
 {
@@ -25,9 +26,14 @@ namespace bgg
             var contentAsByteArray = await response.Content.ReadAsByteArrayAsync();
             var contentAsString = System.Text.Encoding.UTF8.GetString(contentAsByteArray);
             var contentAsXml = XElement.Parse(contentAsString);
-            //Console.WriteLine(conntentAsXml);
 
-            return (ActionResult)new OkObjectResult(contentAsXml);
+            var takeWhatIWant = contentAsXml.Elements("item").Select(x => new
+            {
+                objectId = x.Attribute("objectid").Value,
+                nameof = x.Element("name").Value
+            });
+
+            return new JsonResult(takeWhatIWant);
         }
     }
 }
