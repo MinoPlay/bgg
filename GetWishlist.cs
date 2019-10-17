@@ -24,20 +24,10 @@ namespace bgg
             var response = await client.GetAsync("https://boardgamegeek.com/xmlapi2/collection?username=WDHBoardGameClub&wishlistpriority=3");
             var contentAsByteArray = await response.Content.ReadAsByteArrayAsync();
             var contentAsString = System.Text.Encoding.UTF8.GetString(contentAsByteArray);
-            var conntentAsXml = XElement.Parse(contentAsString);
-            Console.WriteLine(conntentAsXml);
+            var contentAsXml = XElement.Parse(contentAsString);
+            //Console.WriteLine(conntentAsXml);
 
-
-            log.LogInformation("C# HTTP trigger function GetWishlist start processing a request.");
-            string name = req.Query["name"];
-
-            string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
-            dynamic data = JsonConvert.DeserializeObject(requestBody);
-            name = name ?? data?.name;
-
-            return name != null
-                ? (ActionResult)new OkObjectResult($"Hello, {name}")
-                : new BadRequestObjectResult("Please pass a name on the query string or in the request body");
+            return (ActionResult)new OkObjectResult(contentAsXml);
         }
     }
 }
