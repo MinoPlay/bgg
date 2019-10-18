@@ -24,7 +24,7 @@ namespace bgg
                 if (response.IsSuccessStatusCode)
                     success = true;
                 else
-                    Thread.Sleep(2000);
+                    Thread.Sleep(1000);
             }
 
             var contentAsByteArray = await response.Content.ReadAsByteArrayAsync();
@@ -50,7 +50,7 @@ namespace bgg
                 if (response.IsSuccessStatusCode)
                     success = true;
                 else
-                    Thread.Sleep(2000);
+                    Thread.Sleep(1000);
             }
 
             var contentAsByteArray = await response.Content.ReadAsByteArrayAsync();
