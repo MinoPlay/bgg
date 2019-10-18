@@ -4,8 +4,6 @@ using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
-using System.Net.Http;
-using System.Xml.Linq;
 
 namespace bgg
 {
@@ -17,7 +15,7 @@ namespace bgg
             ILogger log)
         {
             var gameId = req.Query["gameId"];
-            var result = await GetGameInfoLogic.GetGameInfo(gameId);
+            var result = await GetGameInfoLogic.GetGameDetails(gameId);
 
             return new JsonResult(result);
         }

@@ -1,17 +1,27 @@
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Azure.WebJobs;
-using Microsoft.Azure.WebJobs.Extensions.Http;
-using Microsoft.AspNetCore.Http;
-using Microsoft.Extensions.Logging;
 using System.Net.Http;
 using System.Xml.Linq;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace bgg
 {
     public static class GetGameInfoLogic
     {
-        public static async Task<GameInfo> GetGameInfo(string gameId)
+        public static async Task<IEnumerable<KeyValuePair<string, string>>> GetWishlist()
+        {
+            var client = new HttpClient();
+            var response = await client.GetAsync("https://boardgamegeek.com/xmlapi2/collection?username=WDHBoardGameClub&wishlistpriority=3");
+            var contentAsByteArray = await response.Content.ReadAsByteArrayAsync();
+            var contentAsString = System.Text.Encoding.UTF8.GetString(contentAsByteArray);
+            var contentAsXml = XElement.Parse(contentAsString);
+
+            var takeWhatIWant = contentAsXml.Elements("item").Select(x => new KeyValuePair<string, string>(x.Attribute("objectid").Value, x.Element("name").Value));
+
+            return takeWhatIWant;
+        }
+
+        public static async Task<GameInfo> GetGameDetails(string gameId)
         {
             var client = new HttpClient();
             var response = await client.GetAsync($"https://boardgamegeek.com/xmlapi2/thing?id={gameId}");
