@@ -3,6 +3,8 @@ using System.Net.Http;
 using System.Xml.Linq;
 using System.Collections.Generic;
 using System.Linq;
+using System;
+using System.Threading;
 
 namespace bgg
 {
@@ -11,7 +13,20 @@ namespace bgg
         public static async Task<IEnumerable<KeyValuePair<string, string>>> GetWishlist()
         {
             var client = new HttpClient();
-            var response = await client.GetAsync("https://boardgamegeek.com/xmlapi2/collection?username=WDHBoardGameClub&wishlistpriority=3");
+
+            var success = false;
+            HttpResponseMessage response = null;
+
+            for (int i = 0; i < 5 || !success; i++)
+            {
+                response = await client.GetAsync("https://boardgamegeek.com/xmlapi2/collection?username=WDHBoardGameClub&wishlistpriority=3");
+
+                if (response.IsSuccessStatusCode)
+                    success = true;
+                else
+                    Thread.Sleep(2000);
+            }
+
             var contentAsByteArray = await response.Content.ReadAsByteArrayAsync();
             var contentAsString = System.Text.Encoding.UTF8.GetString(contentAsByteArray);
             var contentAsXml = XElement.Parse(contentAsString);
@@ -24,7 +39,19 @@ namespace bgg
         public static async Task<GameInfo> GetGameDetails(string gameId)
         {
             var client = new HttpClient();
-            var response = await client.GetAsync($"https://boardgamegeek.com/xmlapi2/thing?id={gameId}");
+
+            var success = false;
+            HttpResponseMessage response = null;
+
+            for (int i = 0; i < 5 || !success; i++)
+            {
+                response = await client.GetAsync($"https://boardgamegeek.com/xmlapi2/thing?id={gameId}");
+
+                if (response.IsSuccessStatusCode)
+                    success = true;
+                else
+                    Thread.Sleep(2000);
+            }
 
             var contentAsByteArray = await response.Content.ReadAsByteArrayAsync();
             var contentAsString = System.Text.Encoding.UTF8.GetString(contentAsByteArray);
