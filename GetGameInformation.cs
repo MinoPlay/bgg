@@ -1,15 +1,11 @@
-using System;
-using System.IO;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
-using Newtonsoft.Json;
 using System.Net.Http;
 using System.Xml.Linq;
-using System.Linq;
 
 namespace bgg
 {
@@ -17,18 +13,13 @@ namespace bgg
     {
         [FunctionName("GetGameInformation")]
         public static async Task<IActionResult> Run(
-            [HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)] string gameId,
+            [HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)] HttpRequest req,
             ILogger log)
         {
-            var client = new HttpClient();
-            var response = await client.GetAsync($"https://boardgamegeek.com/xmlapi2/thing?id={gameId}");
+            var gameId = req.Query["gameId"];
+            var result = await GetGameInfoLogic.GetGameInfo(gameId);
 
-            var contentAsByteArray = await response.Content.ReadAsByteArrayAsync();
-            var contentAsString = System.Text.Encoding.UTF8.GetString(contentAsByteArray);
-
-            var contentAsXml = XElement.Parse(contentAsString);
-
-            return new OkObjectResult(contentAsXml);
+            return new JsonResult(result);
         }
     }
 }
