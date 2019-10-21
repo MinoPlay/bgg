@@ -14,18 +14,7 @@ namespace bgg
         {
             var client = new HttpClient();
 
-            var success = false;
-            HttpResponseMessage response = null;
-
-            for (int i = 0; i < 5 || !success; i++)
-            {
-                response = await client.GetAsync("https://boardgamegeek.com/xmlapi2/collection?username=WDHBoardGameClub&wishlistpriority=3");
-
-                if (response.IsSuccessStatusCode)
-                    success = true;
-                else
-                    Thread.Sleep(1000);
-            }
+            var response = await client.GetAsync("https://boardgamegeek.com/xmlapi2/collection?username=WDHBoardGameClub&wishlistpriority=3");
 
             var contentAsByteArray = await response.Content.ReadAsByteArrayAsync();
             var contentAsString = System.Text.Encoding.UTF8.GetString(contentAsByteArray);
@@ -40,18 +29,7 @@ namespace bgg
         {
             var client = new HttpClient();
 
-            var success = false;
-            HttpResponseMessage response = null;
-
-            for (int i = 0; i < 5 || !success; i++)
-            {
-                response = await client.GetAsync($"https://boardgamegeek.com/xmlapi2/thing?id={gameId}");
-
-                if (response.IsSuccessStatusCode)
-                    success = true;
-                else
-                    Thread.Sleep(1000);
-            }
+            var response = await client.GetAsync($"https://boardgamegeek.com/xmlapi2/thing?id={gameId}");
 
             var contentAsByteArray = await response.Content.ReadAsByteArrayAsync();
             var contentAsString = System.Text.Encoding.UTF8.GetString(contentAsByteArray);
