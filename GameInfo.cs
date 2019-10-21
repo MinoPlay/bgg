@@ -1,7 +1,8 @@
+using Microsoft.WindowsAzure.Storage.Table;
 
 namespace bgg
 {
-    public class GameInfo
+    public class GameInfo : TableEntity
     {
         public string gameTitle { get; set; }
         public string thumbnail { get; set; }
