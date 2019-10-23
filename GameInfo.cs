@@ -4,6 +4,7 @@ namespace bgg
 {
     public class GameInfo : TableEntity
     {
+        public string gameId { get; set; }
         public string gameTitle { get; set; }
         public string thumbnail { get; set; }
         public string description { get; set; }
