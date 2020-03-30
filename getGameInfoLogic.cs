@@ -50,6 +50,7 @@ namespace bgg
 
             var result = new GameInfo
             {
+                gameId = gameId,
                 gameTitle = gameTitle,
                 thumbnail = thumbnail,
                 description = description,
