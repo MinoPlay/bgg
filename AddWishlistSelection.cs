@@ -15,7 +15,7 @@ namespace bgg
     {
         [FunctionName("AddWishlistSelection")]
         public static async Task<IActionResult> Run(
-            [HttpTrigger(AuthorizationLevel.Function, "post", "get", Route = null)] HttpRequest req,
+            [HttpTrigger(AuthorizationLevel.Anonymous, "post", "get", Route = null)] HttpRequest req,
             [Table("WishlistSelections")] IAsyncCollector<WishlistSelection> wishlistSelectionTable,
             ILogger log)
         {

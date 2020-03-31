@@ -16,7 +16,7 @@ namespace bgg
     {
         [FunctionName("GetWishlistDetailedLocalTable")]
         public static async Task<IActionResult> Run(
-            [HttpTrigger(AuthorizationLevel.Function, "get", Route = null)] HttpRequest req,
+            [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = null)] HttpRequest req,
             [Table("Games", "games")] CloudTable games,
             ILogger log)
         {
