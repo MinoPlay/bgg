@@ -6,7 +6,7 @@ namespace bgg
     public class WishlistSelection : TableEntity
     {
         public string UserId { get; set; }
-        // since table storage doesn't support arrays will store as ',' seperated string
-        public string GamesSelections { get; set; }
+        public string GameSelection { get; set; }
+        public string GameWeight { get; set; }
     }
 }

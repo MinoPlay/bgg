@@ -21,7 +21,8 @@ namespace bgg
         {
             // can use req.Query since I am dealing with simple strings
             var userId = req.Query["UserId"];
-            var gamesSelections = req.Query["GameSelections"];
+            var gameSelection = req.Query["GameSelection"];
+            var gameWeight = req.Query["GameWeight"];
 
             // string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
             // dynamic data = JObject.Parse(requestBody);
@@ -35,7 +36,8 @@ namespace bgg
                 PartitionKey = "wishlistSelections",
                 RowKey = Guid.NewGuid().ToString(),
                 UserId = userId,
-                GamesSelections = gamesSelections
+                GameSelection = gameSelection,
+                GameWeight = gameWeight
             };
 
             await wishlistSelectionTable.AddAsync(result);
