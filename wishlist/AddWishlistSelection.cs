@@ -24,13 +24,6 @@ namespace bgg
             var gameSelection = req.Query["GameSelection"];
             var gameWeight = req.Query["GameWeight"];
 
-            // string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
-            // dynamic data = JObject.Parse(requestBody);
-
-            // var wishlistSelectionId = Guid.NewGuid().ToString();
-            // var userId = data["UserId"].Value;
-            // var gamesSelections = data["GameSelections"].Value;
-
             var result = new WishlistSelection
             {
                 PartitionKey = "wishlistSelections",
