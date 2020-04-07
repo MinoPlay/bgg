@@ -7,15 +7,15 @@ using Microsoft.Extensions.Logging;
 
 namespace bgg
 {
-    public static class GetGameInformation
+    public static class BGGGetGameInformation
     {
-        [FunctionName("GetGameInformation")]
+        [FunctionName("BGGGetGameInformation")]
         public static async Task<IActionResult> Run(
-            [HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = null)] HttpRequest req,
+            [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = null)] HttpRequest req,
             ILogger log)
         {
             var gameId = req.Query["gameId"];
-            var result = await GetGameInfoLogic.GetGameDetails(gameId);
+            var result = await BGG_API.GetGameDetails(gameId);
 
             return new JsonResult(result);
         }

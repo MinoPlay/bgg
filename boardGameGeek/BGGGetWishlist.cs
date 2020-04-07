@@ -8,15 +8,14 @@ using System.Linq;
 
 namespace bgg
 {
-    public static class GetWishlist
+    public static class BGGGetWishlist
     {
-        [FunctionName("GetWishlist")]
+        [FunctionName("BGGGetWishlist")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = null)] HttpRequest req,
             ILogger log)
         {
-            log.LogInformation("C# HTTP trigger function GetWishlist start processing a request.");
-            var result = await GetGameInfoLogic.GetWishlist();
+            var result = await BGG_API.GetWishlist();
             return new JsonResult(result.Select(x => new { gameId = x.Key, gameTitle = x.Value }));
         }
     }

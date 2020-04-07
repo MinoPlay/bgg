@@ -7,9 +7,9 @@ using Microsoft.Extensions.Logging;
 
 namespace bgg
 {
-    public static class AddDetailedGame
+    public static class AddGame
     {
-        [FunctionName("AddDetailedGame")]
+        [FunctionName("AddGame")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Function, "post", Route = null)] HttpRequest req,
             [Table("Games")] IAsyncCollector<GameInfo> gamesInfoTable,
@@ -17,7 +17,7 @@ namespace bgg
         {
 
             var gameId = req.Query["gameId"];
-            var result = await GetGameInfoLogic.GetGameDetails(gameId);
+            var result = await BGG_API.GetGameDetails(gameId);
 
             result.PartitionKey = "games";
             result.RowKey = result.gameTitle;

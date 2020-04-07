@@ -13,5 +13,8 @@ namespace bgg
         public string minplaytime { get; set; }
         public string maxplaytime { get; set; }
         public string minage { get; set; }
+
+        public string languageDependence { get; set; }
+        public string averageWeight { get; set; }
     }
 }
