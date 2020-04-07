@@ -23,7 +23,9 @@ namespace bgg
             var retrieveResult = await members.ExecuteAsync(retrieve);
             var result = (Member)retrieveResult.Result;
 
-            return result != null ? new JsonResult(result) : new JsonResult($"Member with initials '{reqInitials}' not found.");
+            return result != null
+                ? (ActionResult)new OkObjectResult($"Added: {reqInitials}")
+                : new BadRequestObjectResult($"Failed to get {reqInitials}");
         }
     }
 }
