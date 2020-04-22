@@ -112,6 +112,7 @@ namespace bgg
 
                 var result = new GameInfo
                 {
+                    PartitionKey = "games",
                     RowKey = gameId,
                     gameId = gameId,
                     gameTitle = gameTitle,
