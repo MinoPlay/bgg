@@ -12,7 +12,7 @@ namespace bgg
     {
         [FunctionName("DeleteGame")]
         public static async Task<IActionResult> Run(
-            [HttpTrigger(AuthorizationLevel.Function, "get", Route = null)] HttpRequest req,
+            [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = null)] HttpRequest req,
             [Table("Games")] CloudTable games,
             ILogger log)
         {

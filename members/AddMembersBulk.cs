@@ -11,7 +11,7 @@ namespace bgg
     {
         [FunctionName("AddMembersBulk")]
         public static async Task<ActionResult> Run(
-            [HttpTrigger(AuthorizationLevel.Function, "get", Route = null)] HttpRequest req,
+            [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = null)] HttpRequest req,
             [Table("Members")] IAsyncCollector<Member> membersTable,
             ILogger log)
         {
