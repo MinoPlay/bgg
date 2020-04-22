@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using System.Linq;
 using Microsoft.WindowsAzure.Storage.Table;
+using System.Collections.Generic;
 
 namespace bgg
 {
@@ -27,7 +28,7 @@ namespace bgg
             var cloudTableGames = cloudTableResponse.Results;
 
             // check what's missing
-            var newlyAddedGames = 0;
+            var newlyAddedGames = new List<GameInfo>();
             foreach (var bggWishlistGame in bggDetailedwishlist)
             {
                 var match = cloudTableGames.SingleOrDefault(x => x.gameId == bggWishlistGame.gameId);
@@ -37,7 +38,7 @@ namespace bgg
                     // insert the new game
                     log.LogInformation($"SyncAgainstBggWishlist > Inserting new game from the wishlist: ${bggWishlistGame.gameTitle}");
                     await gamesInfoTable.AddAsync(bggWishlistGame);
-                    newlyAddedGames++;
+                    newlyAddedGames.Add(bggWishlistGame);
                 }
                 else
                 {
@@ -45,7 +46,7 @@ namespace bgg
                 }
             }
 
-            return (ActionResult)new OkObjectResult($"Succeesfully added '{newlyAddedGames}' games.");
+            return (ActionResult)new JsonResult(newlyAddedGames);
         }
     }
 }

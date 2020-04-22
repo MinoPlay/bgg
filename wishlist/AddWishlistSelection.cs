@@ -5,6 +5,7 @@ using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using System;
+using Microsoft.WindowsAzure.Storage.Table;
 
 namespace bgg
 {
@@ -13,6 +14,7 @@ namespace bgg
         [FunctionName("AddWishlistSelection")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Anonymous, "post", "get", Route = null)] HttpRequest req,
+            [Table("Games", "games")] CloudTable games,
             [Table("WishlistSelections")] IAsyncCollector<WishlistSelection> wishlistSelectionTable,
             ILogger log)
         {
@@ -21,12 +23,18 @@ namespace bgg
             var gameSelection = req.Query["GameSelection"];
             var gameWeight = req.Query["GameWeight"];
 
+            // get game title to add as a part of wishlist
+            var retrieveGame = TableOperation.Retrieve<GameInfo>("games", gameSelection);
+            var retrieveGameResult = await games.ExecuteAsync(retrieveGame);
+            var gameResult = (GameInfo)retrieveGameResult.Result;
+
             var result = new WishlistSelection
             {
                 PartitionKey = "wishlistSelections",
                 RowKey = Guid.NewGuid().ToString(),
                 UserId = userId,
                 GameSelection = gameSelection,
+                GameTitle = gameResult.gameTitle,
                 GameWeight = gameWeight
             };
 

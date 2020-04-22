@@ -30,7 +30,7 @@ namespace bgg
                 HttpResponseMessage response = null;
 
                 var retries = 0;
-                while (retries < 5 || (response != null && response.StatusCode != HttpStatusCode.OK))
+                while (retries < 5 && (response == null || response.StatusCode != HttpStatusCode.OK))
                 {
                     response = await client.GetAsync("https://boardgamegeek.com/xmlapi2/collection?username=WDHBoardGameClub&wishlistpriority=3");
 
@@ -58,7 +58,7 @@ namespace bgg
                 HttpResponseMessage response = null;
 
                 var retries = 0;
-                while (retries < 5 || (response != null && response.StatusCode != HttpStatusCode.OK))
+                while (retries < 5 && (response == null || response.StatusCode != HttpStatusCode.OK))
                 {
                     response = await client.GetAsync($"https://boardgamegeek.com/xmlapi2/thing?id={gameId}&stats=1");
 
@@ -112,6 +112,7 @@ namespace bgg
 
                 var result = new GameInfo
                 {
+                    RowKey = gameId,
                     gameId = gameId,
                     gameTitle = gameTitle,
                     thumbnail = thumbnail,

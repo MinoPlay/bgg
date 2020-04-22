@@ -11,7 +11,7 @@ namespace bgg
     {
         [FunctionName("AddGame")]
         public static async Task<IActionResult> Run(
-            [HttpTrigger(AuthorizationLevel.Function, "post", Route = null)] HttpRequest req,
+            [HttpTrigger(AuthorizationLevel.Function, "get", Route = null)] HttpRequest req,
             [Table("Games")] IAsyncCollector<GameInfo> gamesInfoTable,
             ILogger log)
         {
@@ -20,7 +20,6 @@ namespace bgg
             var result = await BGG_API.GetGameDetails(gameId);
 
             result.PartitionKey = "games";
-            result.RowKey = result.gameTitle;
             await gamesInfoTable.AddAsync(result);
 
             var serializeObject = Newtonsoft.Json.JsonConvert.SerializeObject(result);
