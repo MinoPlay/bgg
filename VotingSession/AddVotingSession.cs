@@ -7,30 +7,30 @@ using Microsoft.Extensions.Logging;
 
 namespace bgg
 {
-    public static class AddMember
+    public static class AddVotingSession
     {
-        [FunctionName("AddMember")]
+        [FunctionName("AddVotingSession")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = null)] HttpRequest req,
-            [Table("Members")] IAsyncCollector<Member> membersTable,
+            [Table("VotingSessions")] IAsyncCollector<VotingSession> votingSessionsTable,
             ILogger log)
         {
 
-            var initials = req.Query["initials"];
+            var sessionId = req.Query["sessionId"];
 
-            if (string.IsNullOrEmpty(initials))
+            if (string.IsNullOrEmpty(sessionId))
             {
-                return new BadRequestObjectResult($"Failed to retrieve passed parameter 'initials' {initials}");
+                return new BadRequestObjectResult($"Failed to retrieve passed parameter 'sessionId' [{sessionId}]");
             }
-            var result = new Member()
+            var result = new VotingSession()
             {
-                PartitionKey = "member",
-                RowKey = initials,
-                Initials = initials,
-                Role = MemberRole.User
+                PartitionKey = "votingSession",
+                RowKey = sessionId,
+                SessionId = sessionId,
+                Active = false
             };
 
-            await membersTable.AddAsync(result);
+            await votingSessionsTable.AddAsync(result);
 
             var serializeObject = Newtonsoft.Json.JsonConvert.SerializeObject(result);
 

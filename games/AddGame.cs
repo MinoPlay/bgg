@@ -17,7 +17,18 @@ namespace bgg
         {
 
             var gameId = req.Query["gameId"];
+
+            if (string.IsNullOrEmpty(gameId))
+            {
+                return new BadRequestObjectResult($"Failed to retrieve passed parameter 'gameId' {gameId}");
+            }
+
             var result = await BGG_API.GetGameDetails(gameId);
+
+            if (result == null)
+            {
+                return new BadRequestObjectResult($"Failed to retrieve game with ID {gameId}");
+            }
 
             result.PartitionKey = "games";
             await gamesInfoTable.AddAsync(result);
