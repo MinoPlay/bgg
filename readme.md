@@ -38,6 +38,7 @@ var stuff = jsonResult.Children().Select(x => x.Children<JProperty>().Single(y =
 }
 
 // Define other methods and classes here
+`
 async void Main()
 {
 	using (var client = new HttpClient())
@@ -83,4 +84,4 @@ public async Task<IEnumerable<string>> GetGameIds(HttpClient client)
 	var jsonResult = JArray.Parse(contentAsByteArray);
 	var stuff = jsonResult.Children().Select(x => x.Children<JProperty>().Single(y => y.Name == "gameId").Value.ToObject<string>());
 	return stuff.ToArray<string>();
-}
+}`
