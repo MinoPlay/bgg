@@ -38,3 +38,49 @@ var stuff = jsonResult.Children().Select(x => x.Children<JProperty>().Single(y =
 }
 
 // Define other methods and classes here
+async void Main()
+{
+	using (var client = new HttpClient())
+	{
+		var basicUrl = @"https://bgg-api.azurewebsites.net/api/";
+		var basicUrlLocal = @"http://localhost:7071/api/";
+		// add voting session
+
+		// get games that should be part of the voting session
+		var gameIds = GetGameIds(client).GetAwaiter().GetResult();
+
+		await AddVotingSessionEntries(client, basicUrlLocal, gameIds, 0);
+		await AddVotingSessionEntries(client, basicUrlLocal, gameIds, 2);
+		await AddVotingSessionEntries(client, basicUrlLocal, gameIds, 5);
+		await AddVotingSessionEntries(client, basicUrlLocal, gameIds, 10);
+		await AddVotingSessionEntries(client, basicUrlLocal, gameIds, 15);
+	}
+}
+
+public async Task AddVotingSessionEntries(HttpClient client, string basicUrl, IEnumerable<string> gameIds, int amountOfGames = 0)
+{
+	var random = new Random();
+
+	var sessionId = random.Next(999999);
+	var addVotingSessionUrl = $"{basicUrl}AddVotingSession?sessionId={sessionId}";
+	await client.GetAsync(addVotingSessionUrl);
+	
+	foreach (var gameid in (amountOfGames != 0 ? gameIds.Take(amountOfGames) : gameIds))
+	{
+		// populate voting session
+		var addVotingSessionEntryId = random.Next(999999);
+		var addVotingSessionEntryUrl = $"{basicUrl}/AddVotingSessionEntry?votingSessionEntryId={addVotingSessionEntryId}votingSessionnId={sessionId}&gameId={gameid}";
+		Console.WriteLine(addVotingSessionEntryUrl);
+		await client.GetAsync(addVotingSessionEntryUrl);
+	}
+}
+
+// get game id's
+public async Task<IEnumerable<string>> GetGameIds(HttpClient client)
+{
+	var response = await client.GetAsync("https://bgg-api.azurewebsites.net/api/BGGGetWishlist");
+	var contentAsByteArray = await response.Content.ReadAsStringAsync();
+	var jsonResult = JArray.Parse(contentAsByteArray);
+	var stuff = jsonResult.Children().Select(x => x.Children<JProperty>().Single(y => y.Name == "gameId").Value.ToObject<string>());
+	return stuff.ToArray<string>();
+}
