@@ -48,7 +48,7 @@ async void Main()
 		// add voting session
 
 		// get games that should be part of the voting session
-		var gameIds = GetGameIds(client).GetAwaiter().GetResult();
+		var gameIds = GetGameIds(client, basicUrlLocal).GetAwaiter().GetResult();
 
 		await AddVotingSessionEntries(client, basicUrlLocal, gameIds, 0);
 		await AddVotingSessionEntries(client, basicUrlLocal, gameIds, 2);
@@ -70,16 +70,16 @@ public async Task AddVotingSessionEntries(HttpClient client, string basicUrl, IE
 	{
 		// populate voting session
 		var addVotingSessionEntryId = random.Next(999999);
-		var addVotingSessionEntryUrl = $"{basicUrl}/AddVotingSessionEntry?votingSessionEntryId={addVotingSessionEntryId}votingSessionnId={sessionId}&gameId={gameid}";
+		var addVotingSessionEntryUrl = $"{basicUrl}AddVotingSessionEntry?votingSessionEntryId={addVotingSessionEntryId}&votingSessionnId={sessionId}&gameId={gameid}";
 		Console.WriteLine(addVotingSessionEntryUrl);
 		await client.GetAsync(addVotingSessionEntryUrl);
 	}
 }
 
 // get game id's
-public async Task<IEnumerable<string>> GetGameIds(HttpClient client)
+public async Task<IEnumerable<string>> GetGameIds(HttpClient client, string basicUrl)
 {
-	var response = await client.GetAsync("https://bgg-api.azurewebsites.net/api/BGGGetWishlist");
+	var response = await client.GetAsync($"{basicUrl}GetWishlist");
 	var contentAsByteArray = await response.Content.ReadAsStringAsync();
 	var jsonResult = JArray.Parse(contentAsByteArray);
 	var stuff = jsonResult.Children().Select(x => x.Children<JProperty>().Single(y => y.Name == "gameId").Value.ToObject<string>());
