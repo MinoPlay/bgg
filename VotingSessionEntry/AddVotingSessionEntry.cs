@@ -17,12 +17,12 @@ namespace bgg
         {
 
             var votingSessionEntryId = req.Query["votingSessionEntryId"];
-            var votingSessionnId = req.Query["votingSessionnId"];
+            var votingSessionId = req.Query["votingSessionId"];
             var gameId = req.Query["gameId"];
 
-            if (string.IsNullOrEmpty(votingSessionEntryId) || string.IsNullOrEmpty(votingSessionnId) || string.IsNullOrEmpty(gameId))
+            if (string.IsNullOrEmpty(votingSessionEntryId) || string.IsNullOrEmpty(votingSessionId) || string.IsNullOrEmpty(gameId))
             {
-                return new BadRequestObjectResult($"Failed to retrieve passed parameters: votingSessionEntryId[{votingSessionEntryId}], votingSessionnId[{votingSessionnId}], gameId[{gameId}]");
+                return new BadRequestObjectResult($"Failed to retrieve passed parameters: votingSessionEntryId[{votingSessionEntryId}], votingSessionnId[{votingSessionId}], gameId[{gameId}]");
             }
 
             var result = new VotingSessionEntry()
@@ -30,7 +30,7 @@ namespace bgg
                 PartitionKey = "votingSessionEntry",
                 RowKey = votingSessionEntryId,
                 VotingSessionEntryId = votingSessionEntryId,
-                VotingSessionnId = votingSessionnId,
+                VotingSessionId = votingSessionId,
                 GameId = gameId
             };
 
