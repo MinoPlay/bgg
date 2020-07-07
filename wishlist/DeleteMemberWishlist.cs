@@ -18,7 +18,7 @@ namespace bgg
             [Table("WishlistSelections", "WishlistSelections")] CloudTable wishlists,
             ILogger log)
         {
-            var reqInitials = req.Query["initials"];
+            var reqInitials = req.Query["initials"].ToString().ToUpper();
             log.LogInformation($"Trying to delete '{reqInitials}' wishlist");
 
             var query = new TableQuery<WishlistSelection>();

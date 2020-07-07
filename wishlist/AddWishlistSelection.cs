@@ -19,7 +19,7 @@ namespace bgg
             ILogger log)
         {
             // can use req.Query since I am dealing with simple strings
-            var userId = req.Query["UserId"];
+            var userId = req.Query["UserId"].ToString().ToUpper();
             var gameSelection = req.Query["GameSelection"];
             var gameWeight = req.Query["GameWeight"];
 

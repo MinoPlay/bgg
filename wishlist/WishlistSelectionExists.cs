@@ -17,7 +17,7 @@ namespace bgg
             [Table("WishlistSelections", "WishlistSelections")] CloudTable wishlistSelections,
             ILogger log)
         {
-            var reqInitials = req.Query["initials"];
+            var reqInitials = req.Query["initials"].ToString().ToUpper();
 
             var query = new TableQuery<WishlistSelection>();
             var segment = await wishlistSelections.ExecuteQuerySegmentedAsync(query, null);
