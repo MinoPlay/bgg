@@ -23,8 +23,8 @@ namespace bgg
                 var result = new Member()
                 {
                     PartitionKey = "member",
-                    RowKey = init,
-                    Initials = init,
+                    RowKey = init.ToUpper(),
+                    Initials = init.ToUpper(),
                     Role = MemberRole.User
                 };
 

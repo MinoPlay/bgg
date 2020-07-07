@@ -16,7 +16,7 @@ namespace bgg
             [Table("Members", "member")] CloudTable members,
             ILogger log)
         {
-            var reqInitials = req.Query["initials"];
+            var reqInitials = req.Query["initials"].ToString().ToUpper();
             log.LogInformation($"Trying to delete '{reqInitials}'");
 
             var retrieve = TableOperation.Retrieve<Member>("member", reqInitials);

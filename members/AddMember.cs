@@ -16,7 +16,7 @@ namespace bgg
             ILogger log)
         {
 
-            var initials = req.Query["initials"];
+            var initials = req.Query["initials"].ToString().ToUpper();
 
             if (string.IsNullOrEmpty(initials))
             {
