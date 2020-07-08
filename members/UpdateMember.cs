@@ -17,7 +17,7 @@ namespace bgg
             ILogger log)
         {
             var reqInitials = req.Query["initials"].ToString().ToUpper();
-            var newRole = (MemberRole)int.Parse(req.Query["role"]);
+            var newRole = int.Parse(req.Query["role"]);
 
             var retrieve = TableOperation.Retrieve<Member>("member", reqInitials);
             var retrieveResult = await members.ExecuteAsync(retrieve);

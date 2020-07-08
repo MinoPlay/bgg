@@ -24,7 +24,7 @@ namespace bgg
             var result = (Member)retrieveResult.Result;
 
             return result != null
-                ? (ActionResult)new OkObjectResult($"valid member: {reqInitials}")
+                ? (ActionResult)new JsonResult(result)
                 : new BadRequestObjectResult($"Failed to get {reqInitials}");
         }
     }

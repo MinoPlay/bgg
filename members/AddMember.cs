@@ -27,7 +27,7 @@ namespace bgg
                 PartitionKey = "member",
                 RowKey = initials,
                 Initials = initials,
-                Role = MemberRole.User
+                Role = 0
             };
 
             await membersTable.AddAsync(result);
