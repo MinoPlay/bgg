@@ -109,6 +109,7 @@ namespace bgg
                     toShortLanguageDependent[languagedependentPoolResults.OrderBy(x => x.numvotes).Last().value];
 
                 var averageweight = dataDump.Element("statistics").Element("ratings").Element("averageweight").Attribute("value").Value;
+                var ranking = dataDump.Element("statistics").Element("ratings").Element("average").Attribute("value").Value;
 
                 var result = new GameInfo
                 {
@@ -124,7 +125,8 @@ namespace bgg
                     maxplaytime = maxplaytime,
                     minage = minage,
                     languageDependence = languagedependent,
-                    averageWeight = averageweight
+                    averageWeight = averageweight,
+                    ranking = ranking
                 };
 
                 return result;
