@@ -25,7 +25,7 @@ namespace bgg
             var result = segment.Where(x => x.UserId == reqInitials);
 
             return result.Any()
-                ? (ActionResult)new JsonResult(segment.Results)
+                ? (ActionResult)new JsonResult(result)
                 : new BadRequestObjectResult($"Wishlist selection doesn't exists for {reqInitials}");
         }
     }
