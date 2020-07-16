@@ -20,13 +20,6 @@ namespace bgg
             var query = new TableQuery<VotingSession>();
             var result = await votingSessionsTable.ExecuteQuerySegmentedAsync(query, null);
 
-            var sessionId = req.Query["sessionId"];
-            if (!string.IsNullOrEmpty(sessionId) && sessionId == "active")
-            {
-                var active = result.Results.Where(x => x.Active);
-                return new JsonResult(active);
-            }
-
             return new JsonResult(result.Results);
         }
     }
