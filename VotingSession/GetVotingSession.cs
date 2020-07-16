@@ -25,7 +25,7 @@ namespace bgg
             var result = (VotingSession)retrieveResult.Result;
 
             return result != null
-                ? (ActionResult)new OkObjectResult($"valid voting session: {sessionId}")
+                ? (ActionResult)new JsonResult(result)
                 : new BadRequestObjectResult($"Failed to get {sessionId}");
         }
     }

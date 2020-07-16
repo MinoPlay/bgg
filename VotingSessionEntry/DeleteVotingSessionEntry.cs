@@ -16,10 +16,10 @@ namespace bgg
             [Table("VotingSessionEntries", "votingSessionEntry")] CloudTable votingSessionEntriesTable,
             ILogger log)
         {
-            var sessionId = req.Query["sessionId"];
-            log.LogInformation($"Trying to delete '{sessionId}'");
+            var votingSessionId = req.Query["votingSessionId"];
+            log.LogInformation($"Trying to delete '{votingSessionId}'");
 
-            var retrieve = TableOperation.Retrieve<VotingSessionEntry>("votingSessionEntry", sessionId);
+            var retrieve = TableOperation.Retrieve<VotingSessionEntry>("votingSessionEntry", votingSessionId);
             var retrieveResult = await votingSessionEntriesTable.ExecuteAsync(retrieve);
             log.LogInformation($"retrieveResult: {retrieveResult.HttpStatusCode}");
 
@@ -31,8 +31,8 @@ namespace bgg
             log.LogInformation($"deleteResult: {deleteResult.HttpStatusCode}");
 
             return deleteResult.HttpStatusCode.ToString().StartsWith("20")
-                ? (ActionResult)new OkObjectResult($"Successfully deleted '{sessionId}'")
-                : new BadRequestObjectResult($"Failed to delete {sessionId}");
+                ? (ActionResult)new OkObjectResult($"Successfully deleted '{votingSessionId}'")
+                : new BadRequestObjectResult($"Failed to delete {votingSessionId}");
         }
     }
 }

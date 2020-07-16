@@ -1,3 +1,4 @@
+using System;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.WebJobs;
@@ -15,16 +16,15 @@ namespace bgg
             [Table("VotingSessionEntries")] IAsyncCollector<VotingSessionEntry> votingSessionEntriesTable,
             ILogger log)
         {
-
-            var votingSessionEntryId = req.Query["votingSessionEntryId"];
             var votingSessionId = req.Query["votingSessionId"];
             var gameId = req.Query["gameId"];
 
-            if (string.IsNullOrEmpty(votingSessionEntryId) || string.IsNullOrEmpty(votingSessionId) || string.IsNullOrEmpty(gameId))
+            if (string.IsNullOrEmpty(votingSessionId) || string.IsNullOrEmpty(gameId))
             {
-                return new BadRequestObjectResult($"Failed to retrieve passed parameters: votingSessionEntryId[{votingSessionEntryId}], votingSessionnId[{votingSessionId}], gameId[{gameId}]");
+                return new BadRequestObjectResult($"Failed to retrieve passed parameters: votingSessionnId[{votingSessionId}], gameId[{gameId}]");
             }
 
+            var votingSessionEntryId = Guid.NewGuid().ToString();
             var result = new VotingSessionEntry()
             {
                 PartitionKey = "votingSessionEntry",

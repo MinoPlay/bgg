@@ -19,6 +19,12 @@ namespace bgg
             var query = new TableQuery<GameInfo>();
             var segment = await games.ExecuteQuerySegmentedAsync(query, null);
 
+            var sessionId = req.Query["sessionId"];
+            if (!string.IsNullOrEmpty(sessionId))
+            {
+
+            }
+
             return new JsonResult(segment.Results);
         }
     }
