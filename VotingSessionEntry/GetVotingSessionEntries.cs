@@ -20,7 +20,11 @@ namespace bgg
             var query = new TableQuery<VotingSessionEntry>();
             var result = await votingSessionEntriesTable.ExecuteQuerySegmentedAsync(query, null);
 
-            return new JsonResult(result.Results);
+            var votingSessionId = req.Query["votingSessionId"];
+            log.LogInformation($"Trying to retrieve '{votingSessionId}'");
+            var filteredResult = result.Results.Where(x => x.VotingSessionId == votingSessionId);
+
+            return new JsonResult(filteredResult);
         }
     }
 }

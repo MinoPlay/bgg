@@ -28,22 +28,6 @@ namespace bgg
 
             var result = (GameInfo)retrieveResult.Result;
 
-            // update time
-            // var gameTitle = req.Query["gameTitle"].ToString().TrimStart('\'').TrimEnd('\'');
-            // if (!string.IsNullOrEmpty(gameTitle) && result.gameTitle != gameTitle)
-            // {
-            //     result.gameTitle = gameTitle;
-            // }
-            // var thumbnail = req.Query["thumbnail"];
-            // if (!string.IsNullOrEmpty(thumbnail) && result.thumbnail != thumbnail)
-            // {
-            //     result.thumbnail = thumbnail;
-            // }
-            // var description = req.Query["description"].ToString().TrimStart('\'').TrimEnd('\'');
-            // if (!string.IsNullOrEmpty(description) && result.description != description)
-            // {
-            //     result.description = description;
-            // }
             var minplayers = req.Query["minplayers"];
             if (!string.IsNullOrEmpty(minplayers) && result.minplayers != minplayers)
             {

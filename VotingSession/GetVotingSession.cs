@@ -20,12 +20,19 @@ namespace bgg
             var sessionId = req.Query["sessionId"];
             log.LogInformation($"Trying to retrieve '{sessionId}'");
 
+            if (!string.IsNullOrEmpty(sessionId) && sessionId == "active")
+            {
+                var allVotingSessions = await votingSessions.ExecuteQuerySegmentedAsync(new TableQuery<VotingSession>(), null);
+                var activeSessions = allVotingSessions.Results.Where(x => x.Active);
+                return new JsonResult(activeSessions);
+            }
+
             var retrieve = TableOperation.Retrieve<VotingSession>("votingSession", sessionId);
             var retrieveResult = await votingSessions.ExecuteAsync(retrieve);
             var result = (VotingSession)retrieveResult.Result;
 
             return result != null
-                ? (ActionResult)new OkObjectResult($"valid voting session: {sessionId}")
+                ? (ActionResult)new JsonResult(result)
                 : new BadRequestObjectResult($"Failed to get {sessionId}");
         }
     }

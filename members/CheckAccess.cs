@@ -10,7 +10,7 @@ namespace bgg
     public static class CheckAccess
     {
         [FunctionName("CheckAccess")]
-        public static async Task<ActionResult> Run(
+        public static ActionResult Run(
             [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = null)] HttpRequest req,
             ILogger log)
         {

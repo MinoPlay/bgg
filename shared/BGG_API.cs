@@ -110,6 +110,7 @@ namespace bgg
 
                 var averageweight = dataDump.Element("statistics").Element("ratings").Element("averageweight").Attribute("value").Value;
                 var ranking = dataDump.Element("statistics").Element("ratings").Element("average").Attribute("value").Value;
+
                 var result = new GameInfo
                 {
                     PartitionKey = "games",
