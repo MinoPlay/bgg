@@ -1,22 +1,18 @@
-$baseUrl = 'http://localhost:7071/api/';
+$baseUrl = 'http://bgg-api-test.azurewebsites.net/api/';
 $games = Invoke-RestMethod "$($baseUrl)GetWishlist";
 
-function AddVotingSessionEntries($amountOfGames) {
+function AddVotingSessionEntries {
 	$sessionId = Get-Random;
 	$addVotingSessionUrl = "$($baseUrl)AddVotingSession?sessionId=$sessionId";
 	Invoke-RestMethod $addVotingSessionUrl;
 	
-	for (($i = 0); ($i -lt $amountOfGames); $i++) {
+	foreach ($game in $games) {
 		$addVotingSessionEntryId = Get-Random;
-		$gameid = $games[$i].gameId;
+		$gameid = $game.gameId;
 		$addVotingSessionEntryUrl = "$($baseUrl)AddVotingSessionEntry?votingSessionEntryId=$($addVotingSessionEntryId)&votingSessionId=$($sessionId)&gameId=$gameid";
 		Write-Host $addVotingSessionEntryUrl;
 		Invoke-RestMethod $addVotingSessionEntryUrl;
 	}
 }
 
-AddVotingSessionEntries(5)
-AddVotingSessionEntries(7)
-AddVotingSessionEntries(10)
-AddVotingSessionEntries(15)
-AddVotingSessionEntries(20)
+AddVotingSessionEntries
