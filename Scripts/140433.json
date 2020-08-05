@@ -1,0 +1,116 @@
+[
+    {
+        "date": "7/2/2019",
+        "initials": "ATSA",
+        "game": "Onitama",
+        "return": "8/2/2019"
+    },
+    {
+        "date": "8/2/2019",
+        "initials": "JACB",
+        "game": "Azul",
+        "return": "18/2/2019"
+    },
+    {
+        "date": "8/2/2019",
+        "initials": "RCHE",
+        "game": "Love letter",
+        "return": "8/3/2019"
+    },
+    {
+        "date": "8/2/2019",
+        "initials": "RCHE",
+        "game": "Citadels",
+        "return": "15/2/2019"
+    },
+    {
+        "date": "8/2/2019",
+        "initials": "RCHE",
+        "game": "Dixit",
+        "return": "15/2/2019"
+    },
+    {
+        "date": "8/2/2019",
+        "initials": "PSZY",
+        "game": "Concept",
+        "return": "13/2/2019"
+    },
+    {
+        "date": "15/2/2019",
+        "initials": "RCHE",
+        "game": "Onitama",
+        "return": "18/3/2019"
+    },
+    {
+        "date": "15/2/2019",
+        "initials": "RCHE",
+        "game": "Castles of burgundy",
+        "return": "18/3/2019"
+    },
+    {
+        "date": "20/2/2019",
+        "initials": "ACRU",
+        "game": "Time stories",
+        "return": "5/3/2019"
+    },
+    {
+        "date": "8/3/2019",
+        "initials": "RCHE",
+        "game": "Citadels",
+        "return": "18/3/2019"
+    },
+    {
+        "date": "8/3/2019",
+        "initials": "RCHE",
+        "game": "Ticket to ride",
+        "return": "18/3/2019"
+    },
+    {
+        "date": "8/3/2019",
+        "initials": "RCHE",
+        "game": "Dixit",
+        "return": "18/3/2019"
+    },
+    {
+        "date": "12/3/2019",
+        "initials": "THMO",
+        "game": "Bunny kingdom",
+        "return": "25/3/2019"
+    },
+    {
+        "date": "21/3/2019",
+        "initials": "LTBE",
+        "game": "Ticket to ride",
+        "return": "25/3/2019"
+    },
+    {
+        "date": "21/3/2019",
+        "initials": "LTBE",
+        "game": "Yamatai",
+        "return": "25/3/2019"
+    },
+    {
+        "date": "25/3/2019",
+        "initials": "SZGO",
+        "game": "Catan",
+        "return": "26/3/2019"
+    },
+    {
+        "date": "26/3/2019",
+        "initials": "SZGO",
+        "game": "Dixit",
+        "return": "27/3/2019"
+    },
+    {
+        "date": "29/3/2019",
+        "initials": "ATSA",
+        "game": "Inis",
+        "return": "4/4/2019"
+    },
+    {
+        "date": "29/3/2019",
+        "initials": "ATSA",
+        "game": "tx 4",
+        "return": "4/4/2019"
+    }
+]
