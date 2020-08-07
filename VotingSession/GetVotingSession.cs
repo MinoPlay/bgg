@@ -23,8 +23,8 @@ namespace bgg
             if (!string.IsNullOrEmpty(sessionId) && sessionId == "active")
             {
                 var allVotingSessions = await votingSessions.ExecuteQuerySegmentedAsync(new TableQuery<VotingSession>(), null);
-                var activeSessions = allVotingSessions.Results.Where(x => x.Active);
-                return new JsonResult(activeSessions);
+                var activeSession = allVotingSessions.Results.SingleOrDefault(x => x.Active);
+                return activeSession != null ? (ActionResult)new JsonResult(activeSession) : new BadRequestObjectResult($"Failed to get {sessionId}");
             }
 
             var retrieve = TableOperation.Retrieve<VotingSession>("votingSession", sessionId);

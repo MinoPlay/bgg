@@ -5,6 +5,7 @@ using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
+using Microsoft.WindowsAzure.Storage.Table;
 
 namespace bgg
 {
@@ -13,6 +14,7 @@ namespace bgg
         [FunctionName("AddVotingSessionEntry")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = null)] HttpRequest req,
+            [Table("Games", "games")] CloudTable games,
             [Table("VotingSessionEntries")] IAsyncCollector<VotingSessionEntry> votingSessionEntriesTable,
             ILogger log)
         {
@@ -24,6 +26,11 @@ namespace bgg
                 return new BadRequestObjectResult($"Failed to retrieve passed parameters: votingSessionnId[{votingSessionId}], gameId[{gameId}]");
             }
 
+            // get game title to add as a part of wishlist
+            var retrieveGame = TableOperation.Retrieve<GameInfo>("games", gameId);
+            var retrieveGameResult = await games.ExecuteAsync(retrieveGame);
+            var gameResult = (GameInfo)retrieveGameResult.Result;
+
             var votingSessionEntryId = Guid.NewGuid().ToString();
             var result = new VotingSessionEntry()
             {
@@ -31,7 +38,8 @@ namespace bgg
                 RowKey = votingSessionEntryId,
                 VotingSessionEntryId = votingSessionEntryId,
                 VotingSessionId = votingSessionId,
-                GameId = gameId
+                GameId = gameId,
+                GameTitle = gameResult.gameTitle
             };
 
             await votingSessionEntriesTable.AddAsync(result);

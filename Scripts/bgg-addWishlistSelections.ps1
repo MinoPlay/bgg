@@ -1,4 +1,5 @@
-$baseUrl = 'http://bgg-api-test.azurewebsites.net/api/';
+$baseUrl = 'http://localhost:7071/api/'
+# $baseUrl = 'https://bgg-api-test.azurewebsites.net/api';
 $games = Invoke-RestMethod "$($baseUrl)GetWishlist";
 $members = Invoke-RestMethod "$($baseUrl)GetAllMembers";
 $weights = 5, 3, 2, 1;

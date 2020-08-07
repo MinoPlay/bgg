@@ -8,5 +8,6 @@ namespace bgg
         public string VotingSessionEntryId { get; set; }
         public string VotingSessionId { get; set; }
         public string GameId { get; set; }
+        public string GameTitle { get; set; }
     }
 }
