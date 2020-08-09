@@ -4,6 +4,20 @@ How to run:
 - Modify local.settings.json file, add `"AzureWebJobsStorage": "UseDevelopmentStorage=true"`
 - Press F5 to run the service
 
+Update local.settings.json to:
+```{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet"
+  },
+  "Host": {
+    "LocalHttpPort": 7071,
+    "CORS": "*"
+  }
+}
+```
+
 How to populate the database:
 
 - Check `Scripts` folder. It contains scripts that will prepopulate the database.

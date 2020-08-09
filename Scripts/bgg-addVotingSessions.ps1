@@ -16,9 +16,9 @@ function AddVotingSessionEntries {
 		Invoke-RestMethod $addVotingSessionEntryUrl;
 		$numb += 1;
 
-		if ($numb -eq 10) {
-			return;
-		}
+		# if ($numb -eq 10) {
+		# 	return;
+		# }
 	}
 }
 
