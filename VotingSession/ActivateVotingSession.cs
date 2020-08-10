@@ -8,9 +8,9 @@ using Microsoft.WindowsAzure.Storage.Table;
 
 namespace bgg
 {
-    public static class UpdateVotingSession
+    public static class ActivateVotingSession
     {
-        [FunctionName("UpdateVotingSession")]
+        [FunctionName("ActivateVotingSession")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = null)] HttpRequest req,
             [Table("VotingSessions", "votingSession")] CloudTable votingSessions,
@@ -26,23 +26,23 @@ namespace bgg
                 return new BadRequestObjectResult($"Session id: {sessionId} not found.");
             }
 
-            var result = (VotingSession)retrieveResult.Result;
+            // set all to disabled                
+            var emptyQuery = new TableQuery<VotingSession>();
+            var allSessions = await votingSessions.ExecuteQuerySegmentedAsync(emptyQuery, null);
 
-            var isActive = req.Query["active"];
-            if (!string.IsNullOrEmpty(isActive))
+            foreach (var session in allSessions)
             {
-                result.Active = bool.Parse(isActive);
-
-                var update = TableOperation.Replace(result);
-                var updateResult = await votingSessions.ExecuteAsync(update);
-
-                return (ActionResult)new JsonResult(updateResult);
+                session.Active = false;
+                var updateSession = TableOperation.Replace(session);
+                await votingSessions.ExecuteAsync(updateSession);
             }
 
+            var result = (VotingSession)retrieveResult.Result;
+            result.Active = true;
+            var update = TableOperation.Replace(result);
+            var updateResult = await votingSessions.ExecuteAsync(update);
 
-            return result != null
-                ? (ActionResult)new JsonResult($"Activation state is not changed, hence nothing to update.")
-                : new BadRequestObjectResult($"Failed to update {sessionId}");
+            return new JsonResult(updateResult.Result);
         }
     }
 }
