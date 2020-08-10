@@ -37,6 +37,8 @@ namespace bgg
                 await votingSessions.ExecuteAsync(updateSession);
             }
 
+
+            retrieveResult = await votingSessions.ExecuteAsync(retrieve);
             var result = (VotingSession)retrieveResult.Result;
             result.Active = true;
             var update = TableOperation.Replace(result);
