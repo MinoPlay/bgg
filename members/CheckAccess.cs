@@ -23,7 +23,7 @@ namespace bgg
                 return new BadRequestObjectResult($"FAILED!");
             }
 
-            return pass == "2020 Oticon board games club!!!" ? (ActionResult)new OkObjectResult("FINE.") : new BadRequestObjectResult($"FAILED!");
+            return pass == "2020" ? (ActionResult)new OkObjectResult("FINE.") : new BadRequestObjectResult($"FAILED!");
         }
     }
 }
