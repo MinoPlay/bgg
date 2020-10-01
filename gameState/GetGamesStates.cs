@@ -13,11 +13,11 @@ namespace bgg
         [FunctionName("GetAllGamesStates")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = null)] HttpRequest req,
-            [Table("AvailableStates", "availableState")] CloudTable availableStates,
+            [Table("GamesState", "gamesState")] CloudTable gamesState,
             ILogger log)
         {
-            var query = new TableQuery<State>();
-            var segment = await availableStates.ExecuteQuerySegmentedAsync(query, null);
+            var query = new TableQuery<GameState>();
+            var segment = await gamesState.ExecuteQuerySegmentedAsync(query, null);
 
             return new JsonResult(segment.Results);
         }
