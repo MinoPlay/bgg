@@ -126,7 +126,8 @@ namespace bgg
                     minage = minage,
                     languageDependence = languagedependent,
                     averageWeight = averageweight,
-                    ranking = ranking
+                    ranking = ranking,
+                    gameState = "wishlist"
                 };
 
                 return result;

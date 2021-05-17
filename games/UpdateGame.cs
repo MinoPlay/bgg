@@ -64,6 +64,12 @@ namespace bgg
                 result.averageWeight = averageWeight;
             }
 
+            var gameState = req.Query["gameState"];
+            if (!string.IsNullOrEmpty(gameState) && result.gameState != gameState)
+            {
+                result.gameState = gameState;
+            }
+
             var update = TableOperation.Replace(result);
             var updateResult = await games.ExecuteAsync(update);
 

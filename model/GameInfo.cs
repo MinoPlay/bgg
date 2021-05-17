@@ -17,5 +17,6 @@ namespace bgg
         public string languageDependence { get; set; }
         public string averageWeight { get; set; }
         public string ranking { get; set; }
+        public string gameState { get; set; }
     }
 }

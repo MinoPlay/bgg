@@ -1,0 +1,852 @@
+[
+    {
+        "userId": "CHJA",
+        "gameSelection": "17133",
+        "gameTitle": "Railways of the World",
+        "gameWeight": "5",
+        "partitionKey": "wishlistSelections",
+        "rowKey": "00ab6576-31d9-40e0-baff-9d77c7dcbb00",
+        "timestamp": "2020-07-08T05:21:28.1943217+00:00",
+        "eTag": "W/\"datetime'2020-07-08T05%3A21%3A28.1943217Z'\""
+    },
+    {
+        "userId": "THMO",
+        "gameSelection": "224517",
+        "gameTitle": "Brass: Birmingham",
+        "gameWeight": "6",
+        "partitionKey": "wishlistSelections",
+        "rowKey": "0749dc0d-4a51-4c7f-bcbf-9925885012d8",
+        "timestamp": "2020-07-07T08:34:31.2227132+00:00",
+        "eTag": "W/\"datetime'2020-07-07T08%3A34%3A31.2227132Z'\""
+    },
+    {
+        "userId": "DNHN",
+        "gameSelection": "224517",
+        "gameTitle": "Brass: Birmingham",
+        "gameWeight": "6",
+        "partitionKey": "wishlistSelections",
+        "rowKey": "08bf4b86-aaa1-4e19-9453-183126ac1999",
+        "timestamp": "2020-07-08T06:06:26.9275317+00:00",
+        "eTag": "W/\"datetime'2020-07-08T06%3A06%3A26.9275317Z'\""
+    },
+    {
+        "userId": "PSZY",
+        "gameSelection": "271324",
+        "gameTitle": "It's a Wonderful World",
+        "gameWeight": "2",
+        "partitionKey": "wishlistSelections",
+        "rowKey": "093a4d6e-7548-4aba-aa38-79c15d521420",
+        "timestamp": "2020-07-07T07:30:27.7544149+00:00",
+        "eTag": "W/\"datetime'2020-07-07T07%3A30%3A27.7544149Z'\""
+    },
+    {
+        "userId": "SIJH",
+        "gameSelection": "209010",
+        "gameTitle": "Mechs vs. Minions",
+        "gameWeight": "6",
+        "partitionKey": "wishlistSelections",
+        "rowKey": "0a47415a-99d5-4e3f-ae19-2d48422fe349",
+        "timestamp": "2020-07-08T04:53:04.7693247+00:00",
+        "eTag": "W/\"datetime'2020-07-08T04%3A53%3A04.7693247Z'\""
+    },
+    {
+        "userId": "AJHA",
+        "gameSelection": "184267",
+        "gameTitle": "On Mars",
+        "gameWeight": "5",
+        "partitionKey": "wishlistSelections",
+        "rowKey": "0bf6086a-13e7-4590-b592-0d87545cbb71",
+        "timestamp": "2020-07-08T05:24:19.5100768+00:00",
+        "eTag": "W/\"datetime'2020-07-08T05%3A24%3A19.5100768Z'\""
+    },
+    {
+        "userId": "MRYT",
+        "gameSelection": "242302",
+        "gameTitle": "Space Base",
+        "gameWeight": "5",
+        "partitionKey": "wishlistSelections",
+        "rowKey": "0e5674ff-6c41-4aa9-a969-36e1d933b0f7",
+        "timestamp": "2020-08-03T13:37:32.9568458+00:00",
+        "eTag": "W/\"datetime'2020-08-03T13%3A37%3A32.9568458Z'\""
+    },
+    {
+        "userId": "AJHA",
+        "gameSelection": "126163",
+        "gameTitle": "Tzolk'in: The Mayan Calendar",
+        "gameWeight": "1",
+        "partitionKey": "wishlistSelections",
+        "rowKey": "10187b1e-e314-4284-b97b-32b7805b502a",
+        "timestamp": "2020-07-08T05:24:19.0106071+00:00",
+        "eTag": "W/\"datetime'2020-07-08T05%3A24%3A19.0106071Z'\""
+    },
+    {
+        "userId": "SIJH",
+        "gameSelection": "205637",
+        "gameTitle": "Arkham Horror: The Card Game",
+        "gameWeight": "4",
+        "partitionKey": "wishlistSelections",
+        "rowKey": "1059eb8d-e82d-4564-b685-cac991d91837",
+        "timestamp": "2020-07-08T04:53:04.7655653+00:00",
+        "eTag": "W/\"datetime'2020-07-08T04%3A53%3A04.7655653Z'\""
+    },
+    {
+        "userId": "JACB",
+        "gameSelection": "250458",
+        "gameTitle": "Gùgōng",
+        "gameWeight": "1",
+        "partitionKey": "wishlistSelections",
+        "rowKey": "10d4bf64-d077-4c4a-9e73-e2f64afedbd1",
+        "timestamp": "2020-07-08T13:00:16.2296075+00:00",
+        "eTag": "W/\"datetime'2020-07-08T13%3A00%3A16.2296075Z'\""
+    },
+    {
+        "userId": "ENHE",
+        "gameSelection": "244521",
+        "gameTitle": "The Quacks of Quedlinburg",
+        "gameWeight": "6",
+        "partitionKey": "wishlistSelections",
+        "rowKey": "1185e442-d611-4a17-9878-19648c1785f1",
+        "timestamp": "2020-07-07T10:37:53.8562209+00:00",
+        "eTag": "W/\"datetime'2020-07-07T10%3A37%3A53.8562209Z'\""
+    },
+    {
+        "userId": "DNHN",
+        "gameSelection": "184267",
+        "gameTitle": "On Mars",
+        "gameWeight": "1",
+        "partitionKey": "wishlistSelections",
+        "rowKey": "17a6fdf6-9356-402f-9a2e-44760691e58a",
+        "timestamp": "2020-07-08T06:06:26.899367+00:00",
+        "eTag": "W/\"datetime'2020-07-08T06%3A06%3A26.899367Z'\""
+    },
+    {
+        "userId": "CHJA",
+        "gameSelection": "210296",
+        "gameTitle": "DinoGenics",
+        "gameWeight": "3",
+        "partitionKey": "wishlistSelections",
+        "rowKey": "18d28466-18bd-4c3a-a185-7f7e64baf1a1",
+        "timestamp": "2020-07-08T05:21:28.2423671+00:00",
+        "eTag": "W/\"datetime'2020-07-08T05%3A21%3A28.2423671Z'\""
+    },
+    {
+        "userId": "AJHA",
+        "gameSelection": "139976",
+        "gameTitle": "Cthulhu Wars",
+        "gameWeight": "6",
+        "partitionKey": "wishlistSelections",
+        "rowKey": "19aaa34b-d8ae-42be-b021-4a8bb23f0aff",
+        "timestamp": "2020-07-08T05:24:19.2131488+00:00",
+        "eTag": "W/\"datetime'2020-07-08T05%3A24%3A19.2131488Z'\""
+    },
+    {
+        "userId": "JOIS",
+        "gameSelection": "815",
+        "gameTitle": "Chrononauts",
+        "gameWeight": "4",
+        "partitionKey": "wishlistSelections",
+        "rowKey": "1a8af4ee-e9cc-4912-be88-913f418782c7",
+        "timestamp": "2020-07-27T10:58:29.8130253+00:00",
+        "eTag": "W/\"datetime'2020-07-27T10%3A58%3A29.8130253Z'\""
+    },
+    {
+        "userId": "PSZY",
+        "gameSelection": "92415",
+        "gameTitle": "Skull",
+        "gameWeight": "3",
+        "partitionKey": "wishlistSelections",
+        "rowKey": "1c062b1e-7d90-4ff4-8bff-87883f462472",
+        "timestamp": "2020-07-07T07:30:27.8485042+00:00",
+        "eTag": "W/\"datetime'2020-07-07T07%3A30%3A27.8485042Z'\""
+    },
+    {
+        "userId": "SIJH",
+        "gameSelection": "282524",
+        "gameTitle": "Horrified",
+        "gameWeight": "3",
+        "partitionKey": "wishlistSelections",
+        "rowKey": "2200d85b-71ce-480a-a58f-0f20bdfb4ead",
+        "timestamp": "2020-07-08T04:53:04.7639759+00:00",
+        "eTag": "W/\"datetime'2020-07-08T04%3A53%3A04.7639759Z'\""
+    },
+    {
+        "userId": "SIJH",
+        "gameSelection": "248490",
+        "gameTitle": "Atlantis Rising (Second Edition)",
+        "gameWeight": "5",
+        "partitionKey": "wishlistSelections",
+        "rowKey": "22a94401-2a61-4702-a063-915a94cc3b51",
+        "timestamp": "2020-07-08T04:53:04.7809143+00:00",
+        "eTag": "W/\"datetime'2020-07-08T04%3A53%3A04.7809143Z'\""
+    },
+    {
+        "userId": "KEAN",
+        "gameSelection": "150",
+        "gameTitle": "PitchCar",
+        "gameWeight": "5",
+        "partitionKey": "wishlistSelections",
+        "rowKey": "25fded14-44f3-4242-a1b4-5c3d5656df5e",
+        "timestamp": "2020-07-17T09:01:46.5936682+00:00",
+        "eTag": "W/\"datetime'2020-07-17T09%3A01%3A46.5936682Z'\""
+    },
+    {
+        "userId": "PSZY",
+        "gameSelection": "302723",
+        "gameTitle": "Forgotten Waters",
+        "gameWeight": "6",
+        "partitionKey": "wishlistSelections",
+        "rowKey": "27a987a4-902e-4f55-bde0-f5a0c4e3e364",
+        "timestamp": "2020-07-07T07:30:27.879827+00:00",
+        "eTag": "W/\"datetime'2020-07-07T07%3A30%3A27.879827Z'\""
+    },
+    {
+        "userId": "MKUC",
+        "gameSelection": "188866",
+        "gameTitle": "Awkward Guests",
+        "gameWeight": "2",
+        "partitionKey": "wishlistSelections",
+        "rowKey": "2a0fd0fd-18cf-4493-b0f5-3f6c4af57c26",
+        "timestamp": "2020-07-09T09:43:29.8768012+00:00",
+        "eTag": "W/\"datetime'2020-07-09T09%3A43%3A29.8768012Z'\""
+    },
+    {
+        "userId": "RCHE",
+        "gameSelection": "251247",
+        "gameTitle": "Barrage",
+        "gameWeight": "1",
+        "partitionKey": "wishlistSelections",
+        "rowKey": "2a168df8-9740-4ce7-9f00-e0f0cfedd00b",
+        "timestamp": "2020-07-16T12:53:13.5815989+00:00",
+        "eTag": "W/\"datetime'2020-07-16T12%3A53%3A13.5815989Z'\""
+    },
+    {
+        "userId": "GUSL",
+        "gameSelection": "167355",
+        "gameTitle": "Nemesis",
+        "gameWeight": "6",
+        "partitionKey": "wishlistSelections",
+        "rowKey": "30397c77-b671-4218-b016-d7d437bca815",
+        "timestamp": "2020-07-07T07:22:46.5918772+00:00",
+        "eTag": "W/\"datetime'2020-07-07T07%3A22%3A46.5918772Z'\""
+    },
+    {
+        "userId": "KEAN",
+        "gameSelection": "521",
+        "gameTitle": "Crokinole",
+        "gameWeight": "6",
+        "partitionKey": "wishlistSelections",
+        "rowKey": "366cdcb0-abb3-412a-a448-cd69addf01b1",
+        "timestamp": "2020-07-17T09:01:44.5420241+00:00",
+        "eTag": "W/\"datetime'2020-07-17T09%3A01%3A44.5420241Z'\""
+    },
+    {
+        "userId": "ENHE",
+        "gameSelection": "521",
+        "gameTitle": "Crokinole",
+        "gameWeight": "4",
+        "partitionKey": "wishlistSelections",
+        "rowKey": "36891925-7dc3-49b0-bfa0-ffcc0912e64a",
+        "timestamp": "2020-07-07T10:37:53.8645603+00:00",
+        "eTag": "W/\"datetime'2020-07-07T10%3A37%3A53.8645603Z'\""
+    },
+    {
+        "userId": "OLEO",
+        "gameSelection": "279537",
+        "gameTitle": "The Search for Planet X",
+        "gameWeight": "6",
+        "partitionKey": "wishlistSelections",
+        "rowKey": "38669675-5ded-4f76-8497-2b353a699833",
+        "timestamp": "2020-08-03T09:05:32.6671872+00:00",
+        "eTag": "W/\"datetime'2020-08-03T09%3A05%3A32.6671872Z'\""
+    },
+    {
+        "userId": "RCHE",
+        "gameSelection": "184267",
+        "gameTitle": "On Mars",
+        "gameWeight": "5",
+        "partitionKey": "wishlistSelections",
+        "rowKey": "46a1679b-802c-40c1-a195-0ecc360b922d",
+        "timestamp": "2020-07-16T12:53:13.4204457+00:00",
+        "eTag": "W/\"datetime'2020-07-16T12%3A53%3A13.4204457Z'\""
+    },
+    {
+        "userId": "GUSL",
+        "gameSelection": "284775",
+        "gameTitle": "Funkoverse Strategy Game",
+        "gameWeight": "2",
+        "partitionKey": "wishlistSelections",
+        "rowKey": "4822f26b-3e18-4c95-97ae-5ac23ef391ab",
+        "timestamp": "2020-07-07T07:22:46.5842978+00:00",
+        "eTag": "W/\"datetime'2020-07-07T07%3A22%3A46.5842978Z'\""
+    },
+    {
+        "userId": "SIJH",
+        "gameSelection": "298065",
+        "gameTitle": "Santa Monica",
+        "gameWeight": "1",
+        "partitionKey": "wishlistSelections",
+        "rowKey": "4d541134-ccd1-45a6-91ed-c4be8869a9a7",
+        "timestamp": "2020-07-08T04:53:04.763101+00:00",
+        "eTag": "W/\"datetime'2020-07-08T04%3A53%3A04.763101Z'\""
+    },
+    {
+        "userId": "JOIS",
+        "gameSelection": "111799",
+        "gameTitle": "Cuba Libre",
+        "gameWeight": "5",
+        "partitionKey": "wishlistSelections",
+        "rowKey": "4fe40636-104e-40fe-b9c0-df3b7f618958",
+        "timestamp": "2020-07-27T10:58:29.8314208+00:00",
+        "eTag": "W/\"datetime'2020-07-27T10%3A58%3A29.8314208Z'\""
+    },
+    {
+        "userId": "PSZY",
+        "gameSelection": "421",
+        "gameTitle": "1830: Railways & Robber Barons",
+        "gameWeight": "5",
+        "partitionKey": "wishlistSelections",
+        "rowKey": "5001f9fe-4fb8-4906-9078-c340a775138a",
+        "timestamp": "2020-07-07T07:30:27.875718+00:00",
+        "eTag": "W/\"datetime'2020-07-07T07%3A30%3A27.875718Z'\""
+    },
+    {
+        "userId": "CHJA",
+        "gameSelection": "104162",
+        "gameTitle": "Descent: Journeys in the Dark (Second Edition)",
+        "gameWeight": "1",
+        "partitionKey": "wishlistSelections",
+        "rowKey": "56daa667-1544-4936-a7c4-5e2e9ceb026a",
+        "timestamp": "2020-07-08T05:21:28.4311025+00:00",
+        "eTag": "W/\"datetime'2020-07-08T05%3A21%3A28.4311025Z'\""
+    },
+    {
+        "userId": "DNHN",
+        "gameSelection": "272739",
+        "gameTitle": "Clinic: Deluxe Edition",
+        "gameWeight": "5",
+        "partitionKey": "wishlistSelections",
+        "rowKey": "57710b0c-a5d8-4175-b813-32629ce0665c",
+        "timestamp": "2020-07-08T06:06:26.717335+00:00",
+        "eTag": "W/\"datetime'2020-07-08T06%3A06%3A26.717335Z'\""
+    },
+    {
+        "userId": "AJHA",
+        "gameSelection": "244521",
+        "gameTitle": "The Quacks of Quedlinburg",
+        "gameWeight": "4",
+        "partitionKey": "wishlistSelections",
+        "rowKey": "59bc2a88-f011-4bac-b9d9-67788a584f1a",
+        "timestamp": "2020-07-08T05:24:19.4173421+00:00",
+        "eTag": "W/\"datetime'2020-07-08T05%3A24%3A19.4173421Z'\""
+    },
+    {
+        "userId": "GUSL",
+        "gameSelection": "284083",
+        "gameTitle": "The Crew: The Quest for Planet Nine",
+        "gameWeight": "3",
+        "partitionKey": "wishlistSelections",
+        "rowKey": "5c1d2d6f-8095-4be9-b0ce-b2809bb9757c",
+        "timestamp": "2020-07-07T07:22:46.5783319+00:00",
+        "eTag": "W/\"datetime'2020-07-07T07%3A22%3A46.5783319Z'\""
+    },
+    {
+        "userId": "OLEO",
+        "gameSelection": "17133",
+        "gameTitle": "Railways of the World",
+        "gameWeight": "4",
+        "partitionKey": "wishlistSelections",
+        "rowKey": "5c95bc75-71a5-4a3e-9b56-6badb574f644",
+        "timestamp": "2020-08-03T09:05:32.8478635+00:00",
+        "eTag": "W/\"datetime'2020-08-03T09%3A05%3A32.8478635Z'\""
+    },
+    {
+        "userId": "CHJA",
+        "gameSelection": "252526",
+        "gameTitle": "Pictomania (Second Edition)",
+        "gameWeight": "2",
+        "partitionKey": "wishlistSelections",
+        "rowKey": "5d0cba1d-a3af-43dd-9ac5-60ab26d6be59",
+        "timestamp": "2020-07-08T05:21:28.3849307+00:00",
+        "eTag": "W/\"datetime'2020-07-08T05%3A21%3A28.3849307Z'\""
+    },
+    {
+        "userId": "RCHE",
+        "gameSelection": "199561",
+        "gameTitle": "Sagrada",
+        "gameWeight": "6",
+        "partitionKey": "wishlistSelections",
+        "rowKey": "6122bffa-7b3a-46c9-bc7c-efa32692a380",
+        "timestamp": "2020-07-16T12:53:15.4659513+00:00",
+        "eTag": "W/\"datetime'2020-07-16T12%3A53%3A15.4659513Z'\""
+    },
+    {
+        "userId": "THMO",
+        "gameSelection": "266810",
+        "gameTitle": "Paladins of the West Kingdom",
+        "gameWeight": "4",
+        "partitionKey": "wishlistSelections",
+        "rowKey": "63ad80f6-f194-428d-92a1-de244856228b",
+        "timestamp": "2020-07-07T08:34:31.018194+00:00",
+        "eTag": "W/\"datetime'2020-07-07T08%3A34%3A31.018194Z'\""
+    },
+    {
+        "userId": "JACB",
+        "gameSelection": "287589",
+        "gameTitle": "Red Outpost",
+        "gameWeight": "6",
+        "partitionKey": "wishlistSelections",
+        "rowKey": "70bbc00b-537e-41b9-98a5-26038e8aac8d",
+        "timestamp": "2020-07-08T13:00:16.1225069+00:00",
+        "eTag": "W/\"datetime'2020-07-08T13%3A00%3A16.1225069Z'\""
+    },
+    {
+        "userId": "GUSL",
+        "gameSelection": "251247",
+        "gameTitle": "Barrage",
+        "gameWeight": "4",
+        "partitionKey": "wishlistSelections",
+        "rowKey": "71dae3e1-d8d7-4a06-b5bb-04c67a72e0b3",
+        "timestamp": "2020-07-07T07:22:46.599312+00:00",
+        "eTag": "W/\"datetime'2020-07-07T07%3A22%3A46.599312Z'\""
+    },
+    {
+        "userId": "RCHE",
+        "gameSelection": "126163",
+        "gameTitle": "Tzolk'in: The Mayan Calendar",
+        "gameWeight": "2",
+        "partitionKey": "wishlistSelections",
+        "rowKey": "7557e25f-b7b6-45af-a8d5-2821cf68ba03",
+        "timestamp": "2020-07-16T12:53:15.3397683+00:00",
+        "eTag": "W/\"datetime'2020-07-16T12%3A53%3A15.3397683Z'\""
+    },
+    {
+        "userId": "MRYT",
+        "gameSelection": "274960",
+        "gameTitle": "Point Salad",
+        "gameWeight": "2",
+        "partitionKey": "wishlistSelections",
+        "rowKey": "75b7e712-0dae-4eb9-820d-22982e80ced9",
+        "timestamp": "2020-08-03T13:37:31.1040604+00:00",
+        "eTag": "W/\"datetime'2020-08-03T13%3A37%3A31.1040604Z'\""
+    },
+    {
+        "userId": "MRYT",
+        "gameSelection": "167355",
+        "gameTitle": "Nemesis",
+        "gameWeight": "1",
+        "partitionKey": "wishlistSelections",
+        "rowKey": "778e2a38-8393-4fb2-a8df-7b8c7e662d05",
+        "timestamp": "2020-08-03T13:37:31.4053454+00:00",
+        "eTag": "W/\"datetime'2020-08-03T13%3A37%3A31.4053454Z'\""
+    },
+    {
+        "userId": "KEAN",
+        "gameSelection": "252526",
+        "gameTitle": "Pictomania (Second Edition)",
+        "gameWeight": "1",
+        "partitionKey": "wishlistSelections",
+        "rowKey": "78c7538f-373d-42b7-91f1-4f76da97cfd9",
+        "timestamp": "2020-07-17T09:01:46.335019+00:00",
+        "eTag": "W/\"datetime'2020-07-17T09%3A01%3A46.335019Z'\""
+    },
+    {
+        "userId": "OLEO",
+        "gameSelection": "227995",
+        "gameTitle": "Raiders of the Deep: U-boats of the Great War, 1914-18",
+        "gameWeight": "5",
+        "partitionKey": "wishlistSelections",
+        "rowKey": "7c12978b-c81f-4f1b-90b0-5cee79cdb259",
+        "timestamp": "2020-08-03T09:05:32.834244+00:00",
+        "eTag": "W/\"datetime'2020-08-03T09%3A05%3A32.834244Z'\""
+    },
+    {
+        "userId": "JOIS",
+        "gameSelection": "227995",
+        "gameTitle": "Raiders of the Deep: U-boats of the Great War, 1914-18",
+        "gameWeight": "6",
+        "partitionKey": "wishlistSelections",
+        "rowKey": "8cdc13fe-e7f6-4e9c-b20e-493380ab6d6e",
+        "timestamp": "2020-07-27T10:58:29.8238485+00:00",
+        "eTag": "W/\"datetime'2020-07-27T10%3A58%3A29.8238485Z'\""
+    },
+    {
+        "userId": "JACB",
+        "gameSelection": "245643",
+        "gameTitle": "Luxor",
+        "gameWeight": "4",
+        "partitionKey": "wishlistSelections",
+        "rowKey": "917cbd5c-8da1-4426-8f97-cac64017110e",
+        "timestamp": "2020-07-08T13:00:16.2856601+00:00",
+        "eTag": "W/\"datetime'2020-07-08T13%3A00%3A16.2856601Z'\""
+    },
+    {
+        "userId": "MRYT",
+        "gameSelection": "271324",
+        "gameTitle": "It's a Wonderful World",
+        "gameWeight": "6",
+        "partitionKey": "wishlistSelections",
+        "rowKey": "9a18e93d-fb1c-4d95-bfe5-6bab4943a5af",
+        "timestamp": "2020-08-03T13:37:32.8979053+00:00",
+        "eTag": "W/\"datetime'2020-08-03T13%3A37%3A32.8979053Z'\""
+    },
+    {
+        "userId": "DNHN",
+        "gameSelection": "206480",
+        "gameTitle": "Imperial Struggle",
+        "gameWeight": "2",
+        "partitionKey": "wishlistSelections",
+        "rowKey": "9ac5bc84-bca5-4f88-b09c-4abacf45b5bf",
+        "timestamp": "2020-07-08T06:06:26.8667599+00:00",
+        "eTag": "W/\"datetime'2020-07-08T06%3A06%3A26.8667599Z'\""
+    },
+    {
+        "userId": "MKUC",
+        "gameSelection": "150",
+        "gameTitle": "PitchCar",
+        "gameWeight": "1",
+        "partitionKey": "wishlistSelections",
+        "rowKey": "9b5a92ed-c210-4296-a592-7f6e74ed8d42",
+        "timestamp": "2020-07-09T09:43:29.8829336+00:00",
+        "eTag": "W/\"datetime'2020-07-09T09%3A43%3A29.8829336Z'\""
+    },
+    {
+        "userId": "RCHE",
+        "gameSelection": "224517",
+        "gameTitle": "Brass: Birmingham",
+        "gameWeight": "3",
+        "partitionKey": "wishlistSelections",
+        "rowKey": "9b6236f2-160c-475b-b753-72f48f20edb0",
+        "timestamp": "2020-07-16T12:53:13.58161+00:00",
+        "eTag": "W/\"datetime'2020-07-16T12%3A53%3A13.58161Z'\""
+    },
+    {
+        "userId": "MRYT",
+        "gameSelection": "302723",
+        "gameTitle": "Forgotten Waters",
+        "gameWeight": "3",
+        "partitionKey": "wishlistSelections",
+        "rowKey": "9d1ab117-bc6f-4bfd-8043-5e72df08f259",
+        "timestamp": "2020-08-03T13:37:31.3132905+00:00",
+        "eTag": "W/\"datetime'2020-08-03T13%3A37%3A31.3132905Z'\""
+    },
+    {
+        "userId": "OLEO",
+        "gameSelection": "209010",
+        "gameTitle": "Mechs vs. Minions",
+        "gameWeight": "3",
+        "partitionKey": "wishlistSelections",
+        "rowKey": "9d3aeaab-b36d-4d9b-85a2-b0706c268284",
+        "timestamp": "2020-08-03T09:05:32.8355732+00:00",
+        "eTag": "W/\"datetime'2020-08-03T09%3A05%3A32.8355732Z'\""
+    },
+    {
+        "userId": "THMO",
+        "gameSelection": "223740",
+        "gameTitle": "Bargain Quest",
+        "gameWeight": "5",
+        "partitionKey": "wishlistSelections",
+        "rowKey": "9e83dcb8-9584-4b44-96b7-231f2f4f0bd7",
+        "timestamp": "2020-07-07T08:34:31.1503202+00:00",
+        "eTag": "W/\"datetime'2020-07-07T08%3A34%3A31.1503202Z'\""
+    },
+    {
+        "userId": "RCHE",
+        "gameSelection": "271324",
+        "gameTitle": "It's a Wonderful World",
+        "gameWeight": "4",
+        "partitionKey": "wishlistSelections",
+        "rowKey": "a0ba10f9-14ff-4afc-90c0-7b1acbb14199",
+        "timestamp": "2020-07-16T12:53:15.4559471+00:00",
+        "eTag": "W/\"datetime'2020-07-16T12%3A53%3A15.4559471Z'\""
+    },
+    {
+        "userId": "ENHE",
+        "gameSelection": "242302",
+        "gameTitle": "Space Base",
+        "gameWeight": "2",
+        "partitionKey": "wishlistSelections",
+        "rowKey": "a290bf5c-d44e-42cc-bcd3-1da3c03f28e5",
+        "timestamp": "2020-07-07T10:37:56.2928118+00:00",
+        "eTag": "W/\"datetime'2020-07-07T10%3A37%3A56.2928118Z'\""
+    },
+    {
+        "userId": "ENHE",
+        "gameSelection": "139976",
+        "gameTitle": "Cthulhu Wars",
+        "gameWeight": "5",
+        "partitionKey": "wishlistSelections",
+        "rowKey": "a2cb70b4-4093-45b4-bcc1-7ab85e1852ba",
+        "timestamp": "2020-07-07T10:37:56.3412758+00:00",
+        "eTag": "W/\"datetime'2020-07-07T10%3A37%3A56.3412758Z'\""
+    },
+    {
+        "userId": "KEAN",
+        "gameSelection": "256952",
+        "gameTitle": "Zombie Kidz Evolution",
+        "gameWeight": "3",
+        "partitionKey": "wishlistSelections",
+        "rowKey": "a50e7d50-b4ed-4b83-87da-5bfc9d777fc9",
+        "timestamp": "2020-07-17T09:01:44.7001748+00:00",
+        "eTag": "W/\"datetime'2020-07-17T09%3A01%3A44.7001748Z'\""
+    },
+    {
+        "userId": "MKUC",
+        "gameSelection": "822",
+        "gameTitle": "Carcassonne",
+        "gameWeight": "6",
+        "partitionKey": "wishlistSelections",
+        "rowKey": "a8318a5b-3f31-4e3a-9c7e-e6e3f2289c84",
+        "timestamp": "2020-07-09T09:43:29.8817532+00:00",
+        "eTag": "W/\"datetime'2020-07-09T09%3A43%3A29.8817532Z'\""
+    },
+    {
+        "userId": "DNHN",
+        "gameSelection": "302723",
+        "gameTitle": "Forgotten Waters",
+        "gameWeight": "4",
+        "partitionKey": "wishlistSelections",
+        "rowKey": "ac9f63b7-9742-410f-8f5a-42ef661cfe02",
+        "timestamp": "2020-07-08T06:06:26.7954079+00:00",
+        "eTag": "W/\"datetime'2020-07-08T06%3A06%3A26.7954079Z'\""
+    },
+    {
+        "userId": "PSZY",
+        "gameSelection": "298065",
+        "gameTitle": "Santa Monica",
+        "gameWeight": "1",
+        "partitionKey": "wishlistSelections",
+        "rowKey": "adbec3a1-6910-4045-91d8-bac56fa224c0",
+        "timestamp": "2020-07-07T07:30:27.7858754+00:00",
+        "eTag": "W/\"datetime'2020-07-07T07%3A30%3A27.7858754Z'\""
+    },
+    {
+        "userId": "OLEO",
+        "gameSelection": "220520",
+        "gameTitle": "Caverna: Cave vs Cave",
+        "gameWeight": "1",
+        "partitionKey": "wishlistSelections",
+        "rowKey": "ae48240e-4df9-453a-8e61-cb3751c33426",
+        "timestamp": "2020-08-03T09:05:32.7792932+00:00",
+        "eTag": "W/\"datetime'2020-08-03T09%3A05%3A32.7792932Z'\""
+    },
+    {
+        "userId": "THMO",
+        "gameSelection": "276025",
+        "gameTitle": "Maracaibo",
+        "gameWeight": "2",
+        "partitionKey": "wishlistSelections",
+        "rowKey": "b7787ff5-1796-4f34-acfd-35a06030b787",
+        "timestamp": "2020-07-07T08:34:31.1850324+00:00",
+        "eTag": "W/\"datetime'2020-07-07T08%3A34%3A31.1850324Z'\""
+    },
+    {
+        "userId": "ENHE",
+        "gameSelection": "215311",
+        "gameTitle": "Downforce",
+        "gameWeight": "3",
+        "partitionKey": "wishlistSelections",
+        "rowKey": "ba679c1d-8548-445c-8dd2-f838489a2188",
+        "timestamp": "2020-07-07T10:37:53.7791479+00:00",
+        "eTag": "W/\"datetime'2020-07-07T10%3A37%3A53.7791479Z'\""
+    },
+    {
+        "userId": "OLEO",
+        "gameSelection": "2651",
+        "gameTitle": "Power Grid",
+        "gameWeight": "2",
+        "partitionKey": "wishlistSelections",
+        "rowKey": "bcf7ed45-d7b4-40cd-9b9b-f680a47d4956",
+        "timestamp": "2020-08-03T09:05:32.8517444+00:00",
+        "eTag": "W/\"datetime'2020-08-03T09%3A05%3A32.8517444Z'\""
+    },
+    {
+        "userId": "ENHE",
+        "gameSelection": "266830",
+        "gameTitle": "Q.E.",
+        "gameWeight": "1",
+        "partitionKey": "wishlistSelections",
+        "rowKey": "c06ea14a-dbf6-4638-879d-b4c3011f6257",
+        "timestamp": "2020-07-07T10:37:56.3326789+00:00",
+        "eTag": "W/\"datetime'2020-07-07T10%3A37%3A56.3326789Z'\""
+    },
+    {
+        "userId": "CHJA",
+        "gameSelection": "205637",
+        "gameTitle": "Arkham Horror: The Card Game",
+        "gameWeight": "4",
+        "partitionKey": "wishlistSelections",
+        "rowKey": "c29fccc1-eeb5-48e2-8aef-e32739492c7a",
+        "timestamp": "2020-07-08T05:21:28.3948096+00:00",
+        "eTag": "W/\"datetime'2020-07-08T05%3A21%3A28.3948096Z'\""
+    },
+    {
+        "userId": "GUSL",
+        "gameSelection": "2651",
+        "gameTitle": "Power Grid",
+        "gameWeight": "5",
+        "partitionKey": "wishlistSelections",
+        "rowKey": "c344edc5-a232-4c25-8dc0-d37249badae0",
+        "timestamp": "2020-07-07T07:22:46.422717+00:00",
+        "eTag": "W/\"datetime'2020-07-07T07%3A22%3A46.422717Z'\""
+    },
+    {
+        "userId": "KEAN",
+        "gameSelection": "822",
+        "gameTitle": "Carcassonne",
+        "gameWeight": "4",
+        "partitionKey": "wishlistSelections",
+        "rowKey": "c360952b-c8e7-4b8c-800a-eaf632ffe6ab",
+        "timestamp": "2020-07-17T09:01:46.2887525+00:00",
+        "eTag": "W/\"datetime'2020-07-17T09%3A01%3A46.2887525Z'\""
+    },
+    {
+        "userId": "PSZY",
+        "gameSelection": "251412",
+        "gameTitle": "On Tour",
+        "gameWeight": "4",
+        "partitionKey": "wishlistSelections",
+        "rowKey": "c7d8de31-1259-48d3-9787-3399d056752c",
+        "timestamp": "2020-07-07T07:30:27.8579436+00:00",
+        "eTag": "W/\"datetime'2020-07-07T07%3A30%3A27.8579436Z'\""
+    },
+    {
+        "userId": "MRYT",
+        "gameSelection": "521",
+        "gameTitle": "Crokinole",
+        "gameWeight": "4",
+        "partitionKey": "wishlistSelections",
+        "rowKey": "cd2ec3d2-01cb-4a9e-ac0f-1d4e67d0f105",
+        "timestamp": "2020-08-03T13:37:36.2483062+00:00",
+        "eTag": "W/\"datetime'2020-08-03T13%3A37%3A36.2483062Z'\""
+    },
+    {
+        "userId": "GUSL",
+        "gameSelection": "92415",
+        "gameTitle": "Skull",
+        "gameWeight": "1",
+        "partitionKey": "wishlistSelections",
+        "rowKey": "d35a2f12-c352-4f46-a88e-356c02abe280",
+        "timestamp": "2020-07-07T07:22:46.5704983+00:00",
+        "eTag": "W/\"datetime'2020-07-07T07%3A22%3A46.5704983Z'\""
+    },
+    {
+        "userId": "MKUC",
+        "gameSelection": "199561",
+        "gameTitle": "Sagrada",
+        "gameWeight": "3",
+        "partitionKey": "wishlistSelections",
+        "rowKey": "d5f29bec-16a6-4f0e-865e-7847907b62fb",
+        "timestamp": "2020-07-09T09:43:29.8826505+00:00",
+        "eTag": "W/\"datetime'2020-07-09T09%3A43%3A29.8826505Z'\""
+    },
+    {
+        "userId": "THMO",
+        "gameSelection": "284818",
+        "gameTitle": "Caylus 1303",
+        "gameWeight": "3",
+        "partitionKey": "wishlistSelections",
+        "rowKey": "d963210b-392a-4ffe-a008-0bc40a54f719",
+        "timestamp": "2020-07-07T08:34:31.2407307+00:00",
+        "eTag": "W/\"datetime'2020-07-07T08%3A34%3A31.2407307Z'\""
+    },
+    {
+        "userId": "JACB",
+        "gameSelection": "276025",
+        "gameTitle": "Maracaibo",
+        "gameWeight": "3",
+        "partitionKey": "wishlistSelections",
+        "rowKey": "dc8b3751-d6bb-43d9-ad36-74dcc7be4d9d",
+        "timestamp": "2020-07-08T13:00:16.1895699+00:00",
+        "eTag": "W/\"datetime'2020-07-08T13%3A00%3A16.1895699Z'\""
+    },
+    {
+        "userId": "AJHA",
+        "gameSelection": "233371",
+        "gameTitle": "Clank! In! Space!: A Deck-Building Adventure",
+        "gameWeight": "3",
+        "partitionKey": "wishlistSelections",
+        "rowKey": "dceeaf23-6b87-42df-a32a-73ab2582b539",
+        "timestamp": "2020-07-08T05:24:19.5103788+00:00",
+        "eTag": "W/\"datetime'2020-07-08T05%3A24%3A19.5103788Z'\""
+    },
+    {
+        "userId": "SIJH",
+        "gameSelection": "172081",
+        "gameTitle": "Burgle Bros.",
+        "gameWeight": "2",
+        "partitionKey": "wishlistSelections",
+        "rowKey": "dfa1d757-c54c-4201-8fd5-ccfd5e6f2069",
+        "timestamp": "2020-07-08T04:53:04.8224567+00:00",
+        "eTag": "W/\"datetime'2020-07-08T04%3A53%3A04.8224567Z'\""
+    },
+    {
+        "userId": "MKUC",
+        "gameSelection": "233371",
+        "gameTitle": "Clank! In! Space!: A Deck-Building Adventure",
+        "gameWeight": "5",
+        "partitionKey": "wishlistSelections",
+        "rowKey": "e0bf60b6-9bc6-4cf5-adaa-f2d3b69045c5",
+        "timestamp": "2020-07-09T09:43:29.882485+00:00",
+        "eTag": "W/\"datetime'2020-07-09T09%3A43%3A29.882485Z'\""
+    },
+    {
+        "userId": "DNHN",
+        "gameSelection": "251247",
+        "gameTitle": "Barrage",
+        "gameWeight": "3",
+        "partitionKey": "wishlistSelections",
+        "rowKey": "e121552e-8338-45d7-89d8-b031ae4d2e8f",
+        "timestamp": "2020-07-08T06:06:26.852587+00:00",
+        "eTag": "W/\"datetime'2020-07-08T06%3A06%3A26.852587Z'\""
+    },
+    {
+        "userId": "JACB",
+        "gameSelection": "272739",
+        "gameTitle": "Clinic: Deluxe Edition",
+        "gameWeight": "5",
+        "partitionKey": "wishlistSelections",
+        "rowKey": "e651ca2d-935e-4317-8337-501a8e5ab70c",
+        "timestamp": "2020-07-08T13:00:16.2079362+00:00",
+        "eTag": "W/\"datetime'2020-07-08T13%3A00%3A16.2079362Z'\""
+    },
+    {
+        "userId": "KEAN",
+        "gameSelection": "205125",
+        "gameTitle": "Ticket to Ride: First Journey (U.S.)",
+        "gameWeight": "2",
+        "partitionKey": "wishlistSelections",
+        "rowKey": "f834718a-c003-42c6-b62e-ea1f29da24b0",
+        "timestamp": "2020-07-17T09:01:44.7364911+00:00",
+        "eTag": "W/\"datetime'2020-07-17T09%3A01%3A44.7364911Z'\""
+    },
+    {
+        "userId": "MKUC",
+        "gameSelection": "209010",
+        "gameTitle": "Mechs vs. Minions",
+        "gameWeight": "4",
+        "partitionKey": "wishlistSelections",
+        "rowKey": "f8c698e7-7f6f-480c-a641-ab1aceec8496",
+        "timestamp": "2020-07-09T09:43:29.870115+00:00",
+        "eTag": "W/\"datetime'2020-07-09T09%3A43%3A29.870115Z'\""
+    },
+    {
+        "userId": "CHJA",
+        "gameSelection": "268493",
+        "gameTitle": "Mechanica",
+        "gameWeight": "6",
+        "partitionKey": "wishlistSelections",
+        "rowKey": "f98f365f-d293-4c5a-beea-4ab50c0d4dbc",
+        "timestamp": "2020-07-08T05:21:28.2924147+00:00",
+        "eTag": "W/\"datetime'2020-07-08T05%3A21%3A28.2924147Z'\""
+    },
+    {
+        "userId": "THMO",
+        "gameSelection": "167355",
+        "gameTitle": "Nemesis",
+        "gameWeight": "1",
+        "partitionKey": "wishlistSelections",
+        "rowKey": "fa2a214c-24ba-4288-84e4-22f95a016bd1",
+        "timestamp": "2020-07-07T08:34:31.2303504+00:00",
+        "eTag": "W/\"datetime'2020-07-07T08%3A34%3A31.2303504Z'\""
+    }
+]
