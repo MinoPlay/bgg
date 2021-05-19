@@ -32,7 +32,7 @@ namespace bgg
                 var retrieveGameResult = await games.ExecuteAsync(retrieveGame);
                 var gameResult = (GameInfo)retrieveGameResult.Result;
 
-                entry.GameTitle = gameResult.gameTitle;
+                entry.GameTitle = gameResult.GameTitle;
                 var update = TableOperation.Replace(entry);
                 var updateResult = await votingSessionEntriesTable.ExecuteAsync(update);
             }

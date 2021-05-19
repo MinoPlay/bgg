@@ -31,12 +31,12 @@ namespace bgg
             var newlyAddedGames = new List<GameInfo>();
             foreach (var bggWishlistGame in bggDetailedwishlist)
             {
-                var match = cloudTableGames.SingleOrDefault(x => x.gameId == bggWishlistGame.gameId);
+                var match = cloudTableGames.SingleOrDefault(x => x.GameId == bggWishlistGame.GameId);
 
                 if (match == null)
                 {
                     // insert the new game
-                    log.LogInformation($"SyncAgainstBggWishlist > Inserting new game from the wishlist: ${bggWishlistGame.gameTitle}");
+                    log.LogInformation($"SyncAgainstBggWishlist > Inserting new game from the wishlist: ${bggWishlistGame.GameTitle}");
                     await gamesInfoTable.AddAsync(bggWishlistGame);
                     newlyAddedGames.Add(bggWishlistGame);
                 }

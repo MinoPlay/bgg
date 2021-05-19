@@ -39,7 +39,7 @@ namespace bgg
                 VotingSessionEntryId = votingSessionEntryId,
                 VotingSessionId = votingSessionId,
                 GameId = gameId,
-                GameTitle = gameResult.gameTitle
+                GameTitle = gameResult.GameTitle
             };
 
             await votingSessionEntriesTable.AddAsync(result);

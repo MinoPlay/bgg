@@ -29,39 +29,44 @@ namespace bgg
             var result = (GameInfo)retrieveResult.Result;
 
             var minplayers = req.Query["minplayers"];
-            if (!string.IsNullOrEmpty(minplayers) && result.minplayers != minplayers)
+            if (!string.IsNullOrEmpty(minplayers) && result.MinPlayers != minplayers)
             {
-                result.minplayers = minplayers;
+                result.MinPlayers = minplayers;
             }
             var maxplayers = req.Query["maxplayers"];
-            if (!string.IsNullOrEmpty(maxplayers) && result.maxplayers != maxplayers)
+            if (!string.IsNullOrEmpty(maxplayers) && result.MaxPlayers != maxplayers)
             {
-                result.maxplayers = maxplayers;
+                result.MaxPlayers = maxplayers;
             }
             var minplaytime = req.Query["minplaytime"];
-            if (!string.IsNullOrEmpty(minplaytime) && result.minplaytime != minplaytime)
+            if (!string.IsNullOrEmpty(minplaytime) && result.MinPlaytime != minplaytime)
             {
-                result.minplaytime = minplaytime;
+                result.MinPlaytime = minplaytime;
             }
             var maxplaytime = req.Query["maxplaytime"];
-            if (!string.IsNullOrEmpty(maxplaytime) && result.maxplaytime != maxplaytime)
+            if (!string.IsNullOrEmpty(maxplaytime) && result.MaxPlaytime != maxplaytime)
             {
-                result.maxplaytime = maxplaytime;
+                result.MaxPlaytime = maxplaytime;
             }
             var minage = req.Query["minage"];
-            if (!string.IsNullOrEmpty(minage) && result.minage != minage)
+            if (!string.IsNullOrEmpty(minage) && result.MinAge != minage)
             {
-                result.minage = minage;
+                result.MinAge = minage;
             }
             var languageDependence = req.Query["languageDependence"];
-            if (!string.IsNullOrEmpty(languageDependence) && result.languageDependence != languageDependence)
+            if (!string.IsNullOrEmpty(languageDependence) && result.LanguageDependence != languageDependence)
             {
-                result.languageDependence = languageDependence;
+                result.LanguageDependence = languageDependence;
             }
             var averageWeight = req.Query["averageWeight"];
-            if (!string.IsNullOrEmpty(averageWeight) && result.averageWeight != averageWeight)
+            if (!string.IsNullOrEmpty(averageWeight) && result.AverageWeight != averageWeight)
             {
-                result.averageWeight = averageWeight;
+                result.AverageWeight = averageWeight;
+            }
+            var gameState = req.Query["gameState"];
+            if (!string.IsNullOrEmpty(gameState) && result.GameState != gameState)
+            {
+                result.GameState = gameState;
             }
 
             var update = TableOperation.Replace(result);

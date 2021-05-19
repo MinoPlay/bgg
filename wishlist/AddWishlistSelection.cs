@@ -34,7 +34,7 @@ namespace bgg
                 RowKey = Guid.NewGuid().ToString(),
                 UserId = userId,
                 GameSelection = gameSelection,
-                GameTitle = gameResult.gameTitle,
+                GameTitle = gameResult.GameTitle,
                 GameWeight = gameWeight
             };
 

@@ -115,18 +115,18 @@ namespace bgg
                 {
                     PartitionKey = "games",
                     RowKey = gameId,
-                    gameId = gameId,
-                    gameTitle = gameTitle,
-                    thumbnail = thumbnail,
-                    description = description,
-                    minplayers = minplayers,
-                    maxplayers = maxplayers,
-                    minplaytime = minplaytime,
-                    maxplaytime = maxplaytime,
-                    minage = minage,
-                    languageDependence = languagedependent,
-                    averageWeight = averageweight,
-                    ranking = ranking
+                    GameId = gameId,
+                    GameTitle = gameTitle,
+                    Thumbnail = thumbnail,
+                    Description = description,
+                    MinPlayers = minplayers,
+                    MaxPlayers = maxplayers,
+                    MinPlaytime = minplaytime,
+                    MaxPlaytime = maxplaytime,
+                    MinAge = minage,
+                    LanguageDependence = languagedependent,
+                    AverageWeight = averageweight,
+                    Ranking = ranking
                 };
 
                 return result;
