@@ -126,7 +126,8 @@ namespace bgg
                     MinAge = minage,
                     LanguageDependence = languagedependent,
                     AverageWeight = averageweight,
-                    Ranking = ranking
+                    Ranking = ranking,
+                    GameState = "unknown"
                 };
 
                 return result;

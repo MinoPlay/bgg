@@ -1,0 +1,9 @@
+GET http://localhost:7071/api/GetAllMembers
+###
+GET http://localhost:7071/api/GetWishlist
+###
+GET http://localhost:7071/api/GetAllGames
+###
+GET http://localhost:7071/api/GetAllAvailableGameStates
+###
+GET http://localhost:7071/api/GetWishlistSelections

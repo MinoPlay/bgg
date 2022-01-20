@@ -20,11 +20,11 @@ namespace bgg
         {
             // can use req.Query since I am dealing with simple strings
             var userId = req.Query["UserId"].ToString().ToUpper();
-            var gameSelection = req.Query["GameSelection"];
+            var gameId = req.Query["GameId"];
             var gameWeight = req.Query["GameWeight"];
 
             // get game title to add as a part of wishlist
-            var retrieveGame = TableOperation.Retrieve<GameInfo>("games", gameSelection);
+            var retrieveGame = TableOperation.Retrieve<GameInfo>("games", gameId);
             var retrieveGameResult = await games.ExecuteAsync(retrieveGame);
             var gameResult = (GameInfo)retrieveGameResult.Result;
 
@@ -33,7 +33,7 @@ namespace bgg
                 PartitionKey = "wishlistSelections",
                 RowKey = Guid.NewGuid().ToString(),
                 UserId = userId,
-                GameSelection = gameSelection,
+                GameId = gameId,
                 GameTitle = gameResult.GameTitle,
                 GameWeight = gameWeight
             };

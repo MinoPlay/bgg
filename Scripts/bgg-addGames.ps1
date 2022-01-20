@@ -12,3 +12,4 @@ foreach ($id in $gameids) {
     Write-Host 'adding: '$id
     $response = Invoke-RestMethod $urlToInvoke
 }
+Write-Host 'DONE!'
