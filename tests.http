@@ -7,3 +7,5 @@ GET http://localhost:7071/api/GetAllGames
 GET http://localhost:7071/api/GetAllAvailableGameStates
 ###
 GET http://localhost:7071/api/GetWishlistSelections
+###
+GET http://localhost:7071/api/AddMember?initials=MKUC

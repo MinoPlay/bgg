@@ -1,0 +1,11 @@
+services:
+    storage:
+        image: "mcr.microsoft.com/azure-storage/azurite"
+        ports:
+          - "10007:10002"
+    function:
+        image: "bgg"
+        ports: 
+          - "7071:80"
+        environment:
+            "AzureWebJobsStorage": "DefaultEndpointsProtocol=http;AccountName=devstoreaccount1;AccountKey=Eby8vdM02xNOcqFlqUwJPLlmEtlCDXJ1OUzFT50uSRZ6IFsuFq2UVErCz4I6tq/K1SZFPTOtr/KBHBeksoGMGw==;TableEndpoint=http://storage:10002/devstoreaccount1;"
